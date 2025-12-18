@@ -1,8 +1,18 @@
 {
-  "test": true,
-  "message": "GitHub logging initialized",
-  "timestamp": "2025-12-18T22:52:36.271Z",
+  "round": 5,
+  "contributors": 14,
+  "modelsInCurrentRound": 2,
+  "lastAggregation": "2025-12-18T22:21:05.164Z",
+  "hasGlobalModel": true,
+  "globalModelRound": 4,
+  "github": {
+    "enabled": true,
+    "pendingRoundLogs": 0,
+    "lastError": null
+  },
   "worker": "healthy",
   "version": "3.0.0",
-  "lastUpdated": "2025-12-18T22:52:36.271Z"
+  "scheduled": true,
+  "cron": "0 * * * *",
+  "lastUpdated": "2025-12-18T23:00:49.137Z"
 }
