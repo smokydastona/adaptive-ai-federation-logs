@@ -1,0 +1,26 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "Placeholder artifact for an unrecoverable federation round snapshot"
+  },
+  "privacy": {
+    "personalData": false
+  },
+  "round": 3,
+  "timestamp": "2025-12-18T23:36:50.539Z",
+  "missing": {
+    "value": true,
+    "reason": "Snapshot was not recorded when round 3 completed; Worker no longer retains the round-3 global model, so it cannot be reconstructed.",
+    "notes": [
+      "This is a placeholder to keep round history contiguous.",
+      "Round 4 was backfilled from current global model."
+    ]
+  },
+  "tactics": {},
+  "metadata": {
+    "loggedAt": "2025-12-18T23:36:50.539Z",
+    "source": "admin",
+    "version": "3.0.0"
+  }
+}
