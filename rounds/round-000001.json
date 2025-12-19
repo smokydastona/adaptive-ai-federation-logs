@@ -32,7 +32,7 @@
     }
   },
   "round": 1,
-  "timestamp": "2025-12-18T20:11:06.604Z",
+  "timestamp": "2025-12-19T00:13:21.161Z",
   "contributors": {
     "servers": 3,
     "submissions": 3
@@ -57,11 +57,11 @@
         "avgReward": 0.5,
         "count": 3,
         "successCount": 3,
-        "successRate": 1,
+        "successRate": 0.7142857142857143,
         "success": {
           "successes": 3,
           "attempts": 3,
-          "rate": 1
+          "rate": 0.7142857142857143
         },
         "legacy": {}
       }
@@ -75,13 +75,13 @@
           "action": "heartbeat_init",
           "avgReward": 0.5,
           "count": 3,
-          "successRate": 1
+          "successRate": 0.7142857142857143
         }
       ]
     }
   },
   "metadata": {
-    "loggedAt": "2025-12-18T20:11:06.877Z",
+    "loggedAt": "2025-12-19T00:13:38.483Z",
     "source": "federation-coordinator",
     "version": "3.0.0"
   }
