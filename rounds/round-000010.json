@@ -1,8 +1,8 @@
 {
   "schema": {
     "name": "mca-ai-enhanced.federation.round",
-    "version": 1,
-    "description": "One file per federation round: metadata + full aggregated tactics snapshot"
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
   },
   "privacy": {
     "personalData": false,
@@ -11,16 +11,52 @@
       "No server identifiers are stored; only aggregate counts."
     ]
   },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Binomial outcome aggregated across contributing samples: successes / attempts.",
+      "notes": [
+        "For low attempts, rates have low confidence; prefer using (successes, attempts) over rate alone."
+      ]
+    }
+  },
   "round": 10,
-  "timestamp": "2025-12-18T19:51:15.762Z",
-  "contributors": 3,
+  "timestamp": "2025-12-19T01:56:29.103Z",
+  "contributors": {
+    "servers": 1,
+    "submissions": 3
+  },
   "mobTypes": [
-    "zombie"
+    "zombie",
+    "skeleton",
+    "creeper"
   ],
   "modelStats": {
     "zombie": {
-      "actionCount": 1,
-      "totalExperiences": 3
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    },
+    "skeleton": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    },
+    "creeper": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
     }
   },
   "aggregation": {
@@ -31,27 +67,83 @@
     "zombie": {
       "heartbeat_init": {
         "avgReward": 0.5,
-        "count": 3,
-        "successCount": 3,
-        "successRate": 1
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6014234270368303,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6014234270368303
+        },
+        "legacy": {}
+      }
+    },
+    "skeleton": {
+      "heartbeat_init": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6
+        },
+        "legacy": {}
+      }
+    },
+    "creeper": {
+      "heartbeat_init": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6
+        },
+        "legacy": {}
       }
     }
   },
   "mobTypeSummary": {
     "zombie": {
-      "actionCount": 1,
+      "distinctActionsObserved": 1,
       "topActions": [
         {
           "action": "heartbeat_init",
           "avgReward": 0.5,
-          "count": 3,
-          "successRate": 1
+          "count": 1,
+          "successRate": 0.6014234270368303
+        }
+      ]
+    },
+    "skeleton": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "heartbeat_init",
+          "avgReward": 0.5,
+          "count": 1,
+          "successRate": 0.6
+        }
+      ]
+    },
+    "creeper": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "heartbeat_init",
+          "avgReward": 0.5,
+          "count": 1,
+          "successRate": 0.6
         }
       ]
     }
   },
   "metadata": {
-    "loggedAt": "2025-12-18T19:51:16.027Z",
+    "loggedAt": "2025-12-19T01:56:29.795Z",
     "source": "federation-coordinator",
     "version": "3.0.0"
   }
