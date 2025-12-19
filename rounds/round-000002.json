@@ -32,18 +32,30 @@
     }
   },
   "round": 2,
-  "timestamp": "2025-12-18T20:20:59.615Z",
+  "timestamp": "2025-12-19T00:13:37.938Z",
   "contributors": {
-    "servers": 3,
+    "servers": 2,
     "submissions": 3
   },
   "mobTypes": [
+    "skeleton",
+    "creeper",
     "zombie"
   ],
   "modelStats": {
+    "skeleton": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    },
+    "creeper": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    },
     "zombie": {
       "distinctActionsObserved": 1,
-      "totalExperiences": 3,
+      "totalExperiences": 1,
       "legacy": {}
     }
   },
@@ -52,36 +64,86 @@
     "workerVersion": "3.0.0"
   },
   "tactics": {
+    "skeleton": {
+      "heartbeat_init": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6
+        },
+        "legacy": {}
+      }
+    },
+    "creeper": {
+      "heartbeat_init": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6
+        },
+        "legacy": {}
+      }
+    },
     "zombie": {
       "heartbeat_init": {
         "avgReward": 0.5,
-        "count": 3,
-        "successCount": 3,
-        "successRate": 1,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6285714285714286,
         "success": {
-          "successes": 3,
-          "attempts": 3,
-          "rate": 1
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6285714285714286
         },
         "legacy": {}
       }
     }
   },
   "mobTypeSummary": {
+    "skeleton": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "heartbeat_init",
+          "avgReward": 0.5,
+          "count": 1,
+          "successRate": 0.6
+        }
+      ]
+    },
+    "creeper": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "heartbeat_init",
+          "avgReward": 0.5,
+          "count": 1,
+          "successRate": 0.6
+        }
+      ]
+    },
     "zombie": {
       "distinctActionsObserved": 1,
       "topActions": [
         {
           "action": "heartbeat_init",
           "avgReward": 0.5,
-          "count": 3,
-          "successRate": 1
+          "count": 1,
+          "successRate": 0.6285714285714286
         }
       ]
     }
   },
   "metadata": {
-    "loggedAt": "2025-12-18T20:20:59.829Z",
+    "loggedAt": "2025-12-19T00:15:10.241Z",
     "source": "federation-coordinator",
     "version": "3.0.0"
   }
