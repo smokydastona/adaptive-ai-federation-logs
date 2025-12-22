@@ -34,7 +34,7 @@
   "round": 348,
   "timestamp": "2025-12-22T18:58:43.925Z",
   "contributors": {
-    "servers": 2,
+    "servers": 403,
     "submissions": 3
   },
   "mobTypes": [
@@ -143,7 +143,7 @@
     }
   },
   "metadata": {
-    "loggedAt": "2025-12-22T18:58:44.567Z",
+    "loggedAt": "2025-12-22T19:00:58.147Z",
     "source": "federation-coordinator",
     "version": "3.0.0"
   }
