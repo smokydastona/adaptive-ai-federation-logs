@@ -95,3 +95,4 @@
 {"timestamp":"2025-12-25T23:37:44.282Z","mobType":"zombie","round":600,"bootstrap":false}
 {"timestamp":"2025-12-25T23:44:09.020Z","mobType":"zombie","round":600,"bootstrap":true}
 {"timestamp":"2025-12-25T23:44:29.585Z","mobType":"zombie","round":601,"bootstrap":true}
+{"timestamp":"2025-12-25T23:44:30.593Z","mobType":"creeper","round":602,"bootstrap":true}
