@@ -146,3 +146,4 @@
 {"timestamp":"2025-12-27T17:08:50.422Z","mobType":"illusioner","round":745,"bootstrap":false}
 {"timestamp":"2025-12-27T17:15:56.093Z","mobType":"zombie","round":745,"bootstrap":true}
 {"timestamp":"2025-12-27T17:16:11.834Z","mobType":"zombie","round":746,"bootstrap":true}
+{"timestamp":"2025-12-27T17:16:12.815Z","mobType":"creeper","round":747,"bootstrap":true}
