@@ -1,0 +1,243 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 752,
+  "timestamp": "2025-12-27T18:14:06.135Z",
+  "contributors": {
+    "servers": 3,
+    "submissions": 3
+  },
+  "mobTypes": [
+    "creeper",
+    "bat",
+    "zombie"
+  ],
+  "modelStats": {
+    "creeper": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    },
+    "bat": {
+      "distinctActionsObserved": 4,
+      "totalExperiences": 13,
+      "legacy": {}
+    },
+    "zombie": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "creeper": {
+      "heartbeat_init": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "bat": {
+      "darkness_active": {
+        "avgReward": 0.16666667,
+        "count": 3,
+        "successCount": 1,
+        "successRate": 0.42857142857142855,
+        "rawSuccessRate": 0.3333333333333333,
+        "success": {
+          "successes": 1,
+          "attempts": 3,
+          "rate": 0.42857142857142855,
+          "smoothedRate": 0.42857142857142855,
+          "rawRate": 0.3333333333333333
+        },
+        "legacy": {}
+      },
+      "cave_roost": {
+        "avgReward": 0,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4,
+          "smoothedRate": 0.4,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "erratic_flight": {
+        "avgReward": 0,
+        "count": 4,
+        "successCount": 0,
+        "successRate": 0.25,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 4,
+          "rate": 0.25,
+          "smoothedRate": 0.25,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "flee_light": {
+        "avgReward": 2.1666667,
+        "count": 5,
+        "successCount": 2,
+        "successRate": 0.4444444444444444,
+        "rawSuccessRate": 0.4,
+        "success": {
+          "successes": 2,
+          "attempts": 5,
+          "rate": 0.4444444444444444,
+          "smoothedRate": 0.4444444444444444,
+          "rawRate": 0.4
+        },
+        "legacy": {}
+      }
+    },
+    "zombie": {
+      "heartbeat_init": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "creeper": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "heartbeat_init",
+          "avgReward": 0.5,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "bat": {
+      "distinctActionsObserved": 4,
+      "topActions": [
+        {
+          "action": "flee_light",
+          "avgReward": 2.1666667,
+          "count": 5,
+          "successCount": 2,
+          "failureCount": 3,
+          "successRate": 0.4444444444444444,
+          "rawSuccessRate": 0.4
+        },
+        {
+          "action": "darkness_active",
+          "avgReward": 0.16666667,
+          "count": 3,
+          "successCount": 1,
+          "failureCount": 2,
+          "successRate": 0.42857142857142855,
+          "rawSuccessRate": 0.3333333333333333
+        },
+        {
+          "action": "erratic_flight",
+          "avgReward": 0,
+          "count": 4,
+          "successCount": 0,
+          "failureCount": 4,
+          "successRate": 0.25,
+          "rawSuccessRate": 0
+        },
+        {
+          "action": "cave_roost",
+          "avgReward": 0,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4,
+          "rawSuccessRate": 0
+        }
+      ]
+    },
+    "zombie": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "heartbeat_init",
+          "avgReward": 0.5,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2025-12-27T18:14:06.723Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
