@@ -25,16 +25,19 @@
       ]
     },
     "success": {
-      "meaning": "Binomial outcome aggregated across contributing samples: successes / attempts.",
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
       "notes": [
-        "For low attempts, rates have low confidence; prefer using (successes, attempts) over rate alone."
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
       ]
     }
   },
   "round": 684,
   "timestamp": "2025-12-27T02:09:03.407Z",
   "contributors": {
-    "servers": 2,
+    "servers": 786,
     "submissions": 3
   },
   "mobTypes": [
@@ -70,10 +73,13 @@
         "count": 1,
         "successCount": 1,
         "successRate": 0.6,
+        "rawSuccessRate": 1,
         "success": {
           "successes": 1,
           "attempts": 1,
-          "rate": 0.6
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
         },
         "legacy": {}
       }
@@ -84,10 +90,13 @@
         "count": 1,
         "successCount": 1,
         "successRate": 0.6,
+        "rawSuccessRate": 1,
         "success": {
           "successes": 1,
           "attempts": 1,
-          "rate": 0.6
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
         },
         "legacy": {}
       }
@@ -98,10 +107,13 @@
         "count": 1,
         "successCount": 1,
         "successRate": 0.6000000119209289,
+        "rawSuccessRate": 1,
         "success": {
           "successes": 1,
           "attempts": 1,
-          "rate": 0.6000000119209289
+          "rate": 0.6000000119209289,
+          "smoothedRate": 0.6000000119209289,
+          "rawRate": 1
         },
         "legacy": {}
       }
@@ -115,7 +127,10 @@
           "action": "heartbeat_init",
           "avgReward": 0.5,
           "count": 1,
-          "successRate": 0.6
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
         }
       ]
     },
@@ -126,7 +141,10 @@
           "action": "heartbeat_init",
           "avgReward": 0.5,
           "count": 1,
-          "successRate": 0.6
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
         }
       ]
     },
@@ -137,13 +155,16 @@
           "action": "heartbeat_init",
           "avgReward": 0.5,
           "count": 1,
-          "successRate": 0.6000000119209289
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6000000119209289,
+          "rawSuccessRate": 1
         }
       ]
     }
   },
   "metadata": {
-    "loggedAt": "2025-12-27T02:09:04.046Z",
+    "loggedAt": "2025-12-27T03:00:17.272Z",
     "source": "federation-coordinator",
     "version": "3.0.0"
   }
