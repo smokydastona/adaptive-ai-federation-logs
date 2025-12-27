@@ -1,0 +1,243 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 710,
+  "timestamp": "2025-12-27T12:36:25.857Z",
+  "contributors": {
+    "servers": 2,
+    "submissions": 3
+  },
+  "mobTypes": [
+    "witch",
+    "bat",
+    "illusioner"
+  ],
+  "modelStats": {
+    "witch": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    },
+    "bat": {
+      "distinctActionsObserved": 2,
+      "totalExperiences": 2,
+      "legacy": {}
+    },
+    "illusioner": {
+      "distinctActionsObserved": 3,
+      "totalExperiences": 8,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "witch": {
+      "hut_defense": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "bat": {
+      "darkness_active": {
+        "avgReward": 0,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4,
+          "smoothedRate": 0.4,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "cave_roost": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "illusioner": {
+      "invisibility_cast": {
+        "avgReward": 0.55544114,
+        "count": 4,
+        "successCount": 4,
+        "successRate": 0.75,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 4,
+          "attempts": 4,
+          "rate": 0.75,
+          "smoothedRate": 0.75,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "blindness_inflict": {
+        "avgReward": 0.36723375,
+        "count": 3,
+        "successCount": 2,
+        "successRate": 0.5714285714285714,
+        "rawSuccessRate": 0.6666666666666666,
+        "success": {
+          "successes": 2,
+          "attempts": 3,
+          "rate": 0.5714285714285714,
+          "smoothedRate": 0.5714285714285714,
+          "rawRate": 0.6666666666666666
+        },
+        "legacy": {}
+      },
+      "arrow_volley": {
+        "avgReward": 0.943787,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "witch": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "hut_defense",
+          "avgReward": 0.5,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "bat": {
+      "distinctActionsObserved": 2,
+      "topActions": [
+        {
+          "action": "cave_roost",
+          "avgReward": 0.5,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "darkness_active",
+          "avgReward": 0,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4,
+          "rawSuccessRate": 0
+        }
+      ]
+    },
+    "illusioner": {
+      "distinctActionsObserved": 3,
+      "topActions": [
+        {
+          "action": "arrow_volley",
+          "avgReward": 0.943787,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "invisibility_cast",
+          "avgReward": 0.55544114,
+          "count": 4,
+          "successCount": 4,
+          "failureCount": 0,
+          "successRate": 0.75,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "blindness_inflict",
+          "avgReward": 0.36723375,
+          "count": 3,
+          "successCount": 2,
+          "failureCount": 1,
+          "successRate": 0.5714285714285714,
+          "rawSuccessRate": 0.6666666666666666
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2025-12-27T12:37:01.191Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
