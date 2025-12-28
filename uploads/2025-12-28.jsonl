@@ -84,3 +84,4 @@
 {"timestamp":"2025-12-28T18:32:03.486Z","mobType":"warden","round":807,"bootstrap":false}
 {"timestamp":"2025-12-28T18:34:59.881Z","mobType":"piglin","round":808,"bootstrap":false}
 {"timestamp":"2025-12-28T18:44:51.034Z","mobType":"zombie","round":808,"bootstrap":true}
+{"timestamp":"2025-12-28T18:44:51.954Z","mobType":"witch","round":808,"bootstrap":true}
