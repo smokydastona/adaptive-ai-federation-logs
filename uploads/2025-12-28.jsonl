@@ -78,3 +78,4 @@
 {"timestamp":"2025-12-28T17:43:54.730Z","mobType":"warden","round":805,"bootstrap":false}
 {"timestamp":"2025-12-28T17:49:17.230Z","mobType":"pillager","round":805,"bootstrap":true}
 {"timestamp":"2025-12-28T18:18:17.192Z","mobType":"zombie","round":805,"bootstrap":true}
+{"timestamp":"2025-12-28T18:18:18.250Z","mobType":"creeper","round":806,"bootstrap":true}
