@@ -112,3 +112,4 @@
 {"timestamp":"2025-12-28T22:10:39.346Z","mobType":"skeleton","round":824,"bootstrap":true}
 {"timestamp":"2025-12-28T22:14:04.873Z","mobType":"zombie","round":825,"bootstrap":true}
 {"timestamp":"2025-12-28T22:26:07.967Z","mobType":"witch","round":826,"bootstrap":true}
+{"timestamp":"2025-12-28T22:37:08.557Z","mobType":"pillager","round":826,"bootstrap":false}
