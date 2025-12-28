@@ -37,8 +37,8 @@
   "round": 785,
   "timestamp": "2025-12-28T06:38:29.740Z",
   "contributors": {
-    "servers": 3,
-    "submissions": 4
+    "servers": 883,
+    "submissions": 3
   },
   "mobTypes": [
     "piglin",
@@ -175,7 +175,7 @@
     }
   },
   "metadata": {
-    "loggedAt": "2025-12-28T06:38:30.301Z",
+    "loggedAt": "2025-12-28T07:00:14.043Z",
     "source": "federation-coordinator",
     "version": "3.0.0"
   }
