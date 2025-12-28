@@ -1,0 +1,219 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 781,
+  "timestamp": "2025-12-28T03:57:43.109Z",
+  "contributors": {
+    "servers": 2,
+    "submissions": 3
+  },
+  "mobTypes": [
+    "pillager",
+    "illusioner",
+    "vindicator"
+  ],
+  "modelStats": {
+    "pillager": {
+      "distinctActionsObserved": 3,
+      "totalExperiences": 3,
+      "legacy": {}
+    },
+    "illusioner": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    },
+    "vindicator": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "pillager": {
+      "patrol_route": {
+        "avgReward": 0.0850694175,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4071428571428572,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4071428571428572,
+          "smoothedRate": 0.4071428571428572,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "outpost_defense": {
+        "avgReward": 0.003125,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.38482142857142865,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.38482142857142865,
+          "smoothedRate": 0.38482142857142865,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "crossbow_volley": {
+        "avgReward": 3.0164062625000003,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.45156250000000003,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.45156250000000003,
+          "smoothedRate": 0.45156250000000003,
+          "rawRate": 0
+        },
+        "legacy": {}
+      }
+    },
+    "illusioner": {
+      "illusion_tactics": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "vindicator": {
+      "door_break": {
+        "avgReward": -2.5,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4,
+          "smoothedRate": 0.4,
+          "rawRate": 0
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "pillager": {
+      "distinctActionsObserved": 3,
+      "topActions": [
+        {
+          "action": "crossbow_volley",
+          "avgReward": 3.0164062625000003,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.45156250000000003,
+          "rawSuccessRate": 0
+        },
+        {
+          "action": "patrol_route",
+          "avgReward": 0.0850694175,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4071428571428572,
+          "rawSuccessRate": 0
+        },
+        {
+          "action": "outpost_defense",
+          "avgReward": 0.003125,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.38482142857142865,
+          "rawSuccessRate": 0
+        }
+      ]
+    },
+    "illusioner": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "illusion_tactics",
+          "avgReward": 0.5,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "vindicator": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "door_break",
+          "avgReward": -2.5,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4,
+          "rawSuccessRate": 0
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2025-12-28T03:57:43.738Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
