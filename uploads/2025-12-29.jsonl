@@ -70,3 +70,4 @@
 {"timestamp":"2025-12-29T12:46:01.122Z","mobType":"zombie","round":856,"bootstrap":false}
 {"timestamp":"2025-12-29T13:02:05.909Z","mobType":"zombie","round":856,"bootstrap":true}
 {"timestamp":"2025-12-29T13:02:07.111Z","mobType":"skeleton","round":857,"bootstrap":true}
+{"timestamp":"2025-12-29T13:02:07.855Z","mobType":"creeper","round":857,"bootstrap":true}
