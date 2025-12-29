@@ -5,3 +5,4 @@
 {"timestamp":"2025-12-29T01:58:00.127Z","mobType":"warden","round":831,"bootstrap":false}
 {"timestamp":"2025-12-29T01:59:03.047Z","mobType":"zombie","round":832,"bootstrap":true}
 {"timestamp":"2025-12-29T02:28:25.400Z","mobType":"pillager","round":833,"bootstrap":true}
+{"timestamp":"2025-12-29T02:33:51.756Z","mobType":"witch","round":833,"bootstrap":false}
