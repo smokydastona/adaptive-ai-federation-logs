@@ -1,0 +1,570 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 952,
+  "timestamp": "2026-01-01T00:55:54.048Z",
+  "contributors": {
+    "servers": 2,
+    "submissions": 6
+  },
+  "mobTypes": [
+    "pillager",
+    "vindicator",
+    "evoker",
+    "vex",
+    "witch",
+    "warden"
+  ],
+  "modelStats": {
+    "pillager": {
+      "distinctActionsObserved": 5,
+      "totalExperiences": 14,
+      "legacy": {}
+    },
+    "vindicator": {
+      "distinctActionsObserved": 3,
+      "totalExperiences": 3,
+      "legacy": {}
+    },
+    "evoker": {
+      "distinctActionsObserved": 5,
+      "totalExperiences": 6,
+      "legacy": {}
+    },
+    "vex": {
+      "distinctActionsObserved": 3,
+      "totalExperiences": 5,
+      "legacy": {}
+    },
+    "witch": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    },
+    "warden": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "pillager": {
+      "banner_leadership": {
+        "avgReward": 0.92016815828125,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.6872829861111112,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.6872829861111112,
+          "smoothedRate": 0.6872829861111112,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "patrol_route": {
+        "avgReward": 0.787264543875,
+        "count": 2,
+        "successCount": 1,
+        "successRate": 0.5551136363636364,
+        "rawSuccessRate": 0.5,
+        "success": {
+          "successes": 1,
+          "attempts": 2,
+          "rate": 0.5551136363636364,
+          "smoothedRate": 0.5551136363636364,
+          "rawRate": 0.5
+        },
+        "legacy": {}
+      },
+      "crossbow_volley": {
+        "avgReward": -0.46962458999999995,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.430952380952381,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.430952380952381,
+          "smoothedRate": 0.430952380952381,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "raid_coordination": {
+        "avgReward": 0.5012035656985883,
+        "count": 4,
+        "successCount": 0,
+        "successRate": 0.3607226107226107,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 4,
+          "rate": 0.3607226107226107,
+          "smoothedRate": 0.3607226107226107,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "outpost_defense": {
+        "avgReward": 0.10654605364457068,
+        "count": 5,
+        "successCount": 2,
+        "successRate": 0.49356060606060603,
+        "rawSuccessRate": 0.4,
+        "success": {
+          "successes": 2,
+          "attempts": 5,
+          "rate": 0.49356060606060603,
+          "smoothedRate": 0.49356060606060603,
+          "rawRate": 0.4
+        },
+        "legacy": {}
+      }
+    },
+    "vindicator": {
+      "johnny_mode": {
+        "avgReward": 0,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4,
+          "smoothedRate": 0.4,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "mansion_patrol": {
+        "avgReward": -0.19934595,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4,
+          "smoothedRate": 0.4,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "raid_assault": {
+        "avgReward": 0.08169949,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "evoker": {
+      "totem_cheat_death": {
+        "avgReward": 0.25,
+        "count": 2,
+        "successCount": 1,
+        "successRate": 0.5,
+        "rawSuccessRate": 0.5,
+        "success": {
+          "successes": 1,
+          "attempts": 2,
+          "rate": 0.5,
+          "smoothedRate": 0.5,
+          "rawRate": 0.5
+        },
+        "legacy": {}
+      },
+      "vex_spawn": {
+        "avgReward": 0,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4,
+          "smoothedRate": 0.4,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "fang_summon": {
+        "avgReward": 0,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4,
+          "smoothedRate": 0.4,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "mansion_boss": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "blue_sheep_convert": {
+        "avgReward": 0,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4,
+          "smoothedRate": 0.4,
+          "rawRate": 0
+        },
+        "legacy": {}
+      }
+    },
+    "vex": {
+      "timed_existence": {
+        "avgReward": 0.6135619,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.65,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.65,
+          "smoothedRate": 0.65,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "coordinated_swarm": {
+        "avgReward": 0.7332516,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.6666666666666666,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.6666666666666666,
+          "smoothedRate": 0.6666666666666666,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "evoker_summoned": {
+        "avgReward": 0.17156869,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "witch": {
+      "heal_self": {
+        "avgReward": 0.12499988,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "warden": {
+      "blind_hunter": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "pillager": {
+      "distinctActionsObserved": 5,
+      "topActions": [
+        {
+          "action": "banner_leadership",
+          "avgReward": 0.92016815828125,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.6872829861111112,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "patrol_route",
+          "avgReward": 0.787264543875,
+          "count": 2,
+          "successCount": 1,
+          "failureCount": 1,
+          "successRate": 0.5551136363636364,
+          "rawSuccessRate": 0.5
+        },
+        {
+          "action": "raid_coordination",
+          "avgReward": 0.5012035656985883,
+          "count": 4,
+          "successCount": 0,
+          "failureCount": 4,
+          "successRate": 0.3607226107226107,
+          "rawSuccessRate": 0
+        },
+        {
+          "action": "outpost_defense",
+          "avgReward": 0.10654605364457068,
+          "count": 5,
+          "successCount": 2,
+          "failureCount": 3,
+          "successRate": 0.49356060606060603,
+          "rawSuccessRate": 0.4
+        },
+        {
+          "action": "crossbow_volley",
+          "avgReward": -0.46962458999999995,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.430952380952381,
+          "rawSuccessRate": 0
+        }
+      ]
+    },
+    "vindicator": {
+      "distinctActionsObserved": 3,
+      "topActions": [
+        {
+          "action": "raid_assault",
+          "avgReward": 0.08169949,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "johnny_mode",
+          "avgReward": 0,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4,
+          "rawSuccessRate": 0
+        },
+        {
+          "action": "mansion_patrol",
+          "avgReward": -0.19934595,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4,
+          "rawSuccessRate": 0
+        }
+      ]
+    },
+    "evoker": {
+      "distinctActionsObserved": 5,
+      "topActions": [
+        {
+          "action": "mansion_boss",
+          "avgReward": 0.5,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "totem_cheat_death",
+          "avgReward": 0.25,
+          "count": 2,
+          "successCount": 1,
+          "failureCount": 1,
+          "successRate": 0.5,
+          "rawSuccessRate": 0.5
+        },
+        {
+          "action": "vex_spawn",
+          "avgReward": 0,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4,
+          "rawSuccessRate": 0
+        },
+        {
+          "action": "fang_summon",
+          "avgReward": 0,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4,
+          "rawSuccessRate": 0
+        },
+        {
+          "action": "blue_sheep_convert",
+          "avgReward": 0,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4,
+          "rawSuccessRate": 0
+        }
+      ]
+    },
+    "vex": {
+      "distinctActionsObserved": 3,
+      "topActions": [
+        {
+          "action": "coordinated_swarm",
+          "avgReward": 0.7332516,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.6666666666666666,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "timed_existence",
+          "avgReward": 0.6135619,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.65,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "evoker_summoned",
+          "avgReward": 0.17156869,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "witch": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "heal_self",
+          "avgReward": 0.12499988,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "warden": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "blind_hunter",
+          "avgReward": 0.5,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2026-01-01T00:55:55.187Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
