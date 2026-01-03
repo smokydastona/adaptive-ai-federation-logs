@@ -1,0 +1,363 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 1016,
+  "timestamp": "2026-01-03T19:50:34.701Z",
+  "contributors": {
+    "servers": 3,
+    "submissions": 3
+  },
+  "mobTypes": [
+    "witch",
+    "pillager",
+    "piglin"
+  ],
+  "modelStats": {
+    "witch": {
+      "distinctActionsObserved": 5,
+      "totalExperiences": 18,
+      "legacy": {}
+    },
+    "pillager": {
+      "distinctActionsObserved": 4,
+      "totalExperiences": 10,
+      "legacy": {}
+    },
+    "piglin": {
+      "distinctActionsObserved": 2,
+      "totalExperiences": 3,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "witch": {
+      "heal_self": {
+        "avgReward": 0,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4,
+          "smoothedRate": 0.4,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "potion_throw": {
+        "avgReward": 0.2375,
+        "count": 4,
+        "successCount": 2,
+        "successRate": 0.525,
+        "rawSuccessRate": 0.5,
+        "success": {
+          "successes": 2,
+          "attempts": 4,
+          "rate": 0.525,
+          "smoothedRate": 0.525,
+          "rawRate": 0.5
+        },
+        "legacy": {}
+      },
+      "terrain_use": {
+        "avgReward": 0.33333334,
+        "count": 3,
+        "successCount": 2,
+        "successRate": 0.5714285714285714,
+        "rawSuccessRate": 0.6666666666666666,
+        "success": {
+          "successes": 2,
+          "attempts": 3,
+          "rate": 0.5714285714285714,
+          "smoothedRate": 0.5714285714285714,
+          "rawRate": 0.6666666666666666
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.10000000750008695,
+        "count": 8,
+        "successCount": 8,
+        "successRate": 0.7876648417322627,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 8,
+          "attempts": 8,
+          "rate": 0.7876648417322627,
+          "smoothedRate": 0.7876648417322627,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "hut_defense": {
+        "avgReward": 0.05,
+        "count": 2,
+        "successCount": 1,
+        "successRate": 0.5,
+        "rawSuccessRate": 0.5,
+        "success": {
+          "successes": 1,
+          "attempts": 2,
+          "rate": 0.5,
+          "smoothedRate": 0.5,
+          "rawRate": 0.5
+        },
+        "legacy": {}
+      }
+    },
+    "pillager": {
+      "straight_charge": {
+        "avgReward": 0.10000000250000002,
+        "count": 5,
+        "successCount": 5,
+        "successRate": 0.787878787878788,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 5,
+          "attempts": 5,
+          "rate": 0.787878787878788,
+          "smoothedRate": 0.787878787878788,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "raid_coordination": {
+        "avgReward": 0.14375000000000002,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.65625,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.65625,
+          "smoothedRate": 0.65625,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "outpost_defense": {
+        "avgReward": 0.05,
+        "count": 2,
+        "successCount": 1,
+        "successRate": 0.5,
+        "rawSuccessRate": 0.5,
+        "success": {
+          "successes": 1,
+          "attempts": 2,
+          "rate": 0.5,
+          "smoothedRate": 0.5,
+          "rawRate": 0.5
+        },
+        "legacy": {}
+      },
+      "crossbow_volley": {
+        "avgReward": 11.182902499999999,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.575,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.575,
+          "smoothedRate": 0.575,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "piglin": {
+      "melee_rush": {
+        "avgReward": 0.05,
+        "count": 2,
+        "successCount": 1,
+        "successRate": 0.5,
+        "rawSuccessRate": 0.5,
+        "success": {
+          "successes": 1,
+          "attempts": 2,
+          "rate": 0.5,
+          "smoothedRate": 0.5,
+          "rawRate": 0.5
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.1,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "witch": {
+      "distinctActionsObserved": 5,
+      "topActions": [
+        {
+          "action": "terrain_use",
+          "avgReward": 0.33333334,
+          "count": 3,
+          "successCount": 2,
+          "failureCount": 1,
+          "successRate": 0.5714285714285714,
+          "rawSuccessRate": 0.6666666666666666
+        },
+        {
+          "action": "potion_throw",
+          "avgReward": 0.2375,
+          "count": 4,
+          "successCount": 2,
+          "failureCount": 2,
+          "successRate": 0.525,
+          "rawSuccessRate": 0.5
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.10000000750008695,
+          "count": 8,
+          "successCount": 8,
+          "failureCount": 0,
+          "successRate": 0.7876648417322627,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "hut_defense",
+          "avgReward": 0.05,
+          "count": 2,
+          "successCount": 1,
+          "failureCount": 1,
+          "successRate": 0.5,
+          "rawSuccessRate": 0.5
+        },
+        {
+          "action": "heal_self",
+          "avgReward": 0,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4,
+          "rawSuccessRate": 0
+        }
+      ]
+    },
+    "pillager": {
+      "distinctActionsObserved": 4,
+      "topActions": [
+        {
+          "action": "crossbow_volley",
+          "avgReward": 11.182902499999999,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.575,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "raid_coordination",
+          "avgReward": 0.14375000000000002,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.65625,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.10000000250000002,
+          "count": 5,
+          "successCount": 5,
+          "failureCount": 0,
+          "successRate": 0.787878787878788,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "outpost_defense",
+          "avgReward": 0.05,
+          "count": 2,
+          "successCount": 1,
+          "failureCount": 1,
+          "successRate": 0.5,
+          "rawSuccessRate": 0.5
+        }
+      ]
+    },
+    "piglin": {
+      "distinctActionsObserved": 2,
+      "topActions": [
+        {
+          "action": "straight_charge",
+          "avgReward": 0.1,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "melee_rush",
+          "avgReward": 0.05,
+          "count": 2,
+          "successCount": 1,
+          "failureCount": 1,
+          "successRate": 0.5,
+          "rawSuccessRate": 0.5
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2026-01-03T19:50:35.583Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
