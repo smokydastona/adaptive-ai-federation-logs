@@ -19,3 +19,4 @@
 {"timestamp":"2026-01-03T13:20:35.194Z","mobType":"vindicator","round":1010,"bootstrap":false}
 {"timestamp":"2026-01-03T13:39:36.333Z","mobType":"witch","round":1010,"bootstrap":false}
 {"timestamp":"2026-01-03T13:43:59.848Z","mobType":"witch","round":1011,"bootstrap":false}
+{"timestamp":"2026-01-03T13:48:40.236Z","mobType":"zombie","round":1011,"bootstrap":true}
