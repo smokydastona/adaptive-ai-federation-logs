@@ -34,3 +34,4 @@
 {"timestamp":"2026-01-04T15:43:48.846Z","mobType":"zombie","round":1033,"bootstrap":false}
 {"timestamp":"2026-01-04T16:11:56.162Z","mobType":"witch","round":1033,"bootstrap":false}
 {"timestamp":"2026-01-04T16:18:30.552Z","mobType":"zombie","round":1034,"bootstrap":true}
+{"timestamp":"2026-01-04T16:18:31.076Z","mobType":"creeper","round":1034,"bootstrap":true}
