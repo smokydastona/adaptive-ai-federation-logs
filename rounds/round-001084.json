@@ -1,0 +1,339 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 1084,
+  "timestamp": "2026-01-07T06:30:45.969Z",
+  "contributors": {
+    "servers": 2,
+    "submissions": 3
+  },
+  "mobTypes": [
+    "piglin",
+    "zombie",
+    "skeleton"
+  ],
+  "modelStats": {
+    "piglin": {
+      "distinctActionsObserved": 8,
+      "totalExperiences": 31,
+      "legacy": {}
+    },
+    "zombie": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    },
+    "skeleton": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "piglin": {
+      "trade_check": {
+        "avgReward": 22.834806962499997,
+        "count": 5,
+        "successCount": 4,
+        "successRate": 0.6625,
+        "rawSuccessRate": 0.8,
+        "success": {
+          "successes": 4,
+          "attempts": 5,
+          "rate": 0.6625,
+          "smoothedRate": 0.6625,
+          "rawRate": 0.8
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.10000001187500002,
+        "count": 7,
+        "successCount": 7,
+        "successRate": 0.8322769448688566,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 7,
+          "attempts": 7,
+          "rate": 0.8322769448688566,
+          "smoothedRate": 0.8322769448688566,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "crossbow_attack": {
+        "avgReward": 9.088530171875,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.5981584821428572,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.5981584821428572,
+          "smoothedRate": 0.5981584821428572,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "melee_rush": {
+        "avgReward": -0.9351646299999999,
+        "count": 5,
+        "successCount": 2,
+        "successRate": 0.4444444444444444,
+        "rawSuccessRate": 0.4,
+        "success": {
+          "successes": 2,
+          "attempts": 5,
+          "rate": 0.4444444444444444,
+          "smoothedRate": 0.4444444444444444,
+          "rawRate": 0.4
+        },
+        "legacy": {}
+      },
+      "pack_coordination": {
+        "avgReward": 1.2000098325,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.655078125,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.655078125,
+          "smoothedRate": 0.655078125,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "gold_detection": {
+        "avgReward": 26.4794651475,
+        "count": 4,
+        "successCount": 3,
+        "successRate": 0.61875,
+        "rawSuccessRate": 0.75,
+        "success": {
+          "successes": 3,
+          "attempts": 4,
+          "rate": 0.61875,
+          "smoothedRate": 0.61875,
+          "rawRate": 0.75
+        },
+        "legacy": {}
+      },
+      "default_attack": {
+        "avgReward": 0.1,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.65,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.65,
+          "smoothedRate": 0.65,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "bastion_defense": {
+        "avgReward": 20.705609391875,
+        "count": 5,
+        "successCount": 3,
+        "successRate": 0.563764880952381,
+        "rawSuccessRate": 0.6,
+        "success": {
+          "successes": 3,
+          "attempts": 5,
+          "rate": 0.563764880952381,
+          "smoothedRate": 0.563764880952381,
+          "rawRate": 0.6
+        },
+        "legacy": {}
+      }
+    },
+    "zombie": {
+      "heartbeat_init": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "skeleton": {
+      "heartbeat_init": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "piglin": {
+      "distinctActionsObserved": 8,
+      "topActions": [
+        {
+          "action": "gold_detection",
+          "avgReward": 26.4794651475,
+          "count": 4,
+          "successCount": 3,
+          "failureCount": 1,
+          "successRate": 0.61875,
+          "rawSuccessRate": 0.75
+        },
+        {
+          "action": "trade_check",
+          "avgReward": 22.834806962499997,
+          "count": 5,
+          "successCount": 4,
+          "failureCount": 1,
+          "successRate": 0.6625,
+          "rawSuccessRate": 0.8
+        },
+        {
+          "action": "bastion_defense",
+          "avgReward": 20.705609391875,
+          "count": 5,
+          "successCount": 3,
+          "failureCount": 2,
+          "successRate": 0.563764880952381,
+          "rawSuccessRate": 0.6
+        },
+        {
+          "action": "crossbow_attack",
+          "avgReward": 9.088530171875,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.5981584821428572,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "pack_coordination",
+          "avgReward": 1.2000098325,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.655078125,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.10000001187500002,
+          "count": 7,
+          "successCount": 7,
+          "failureCount": 0,
+          "successRate": 0.8322769448688566,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "default_attack",
+          "avgReward": 0.1,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.65,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "melee_rush",
+          "avgReward": -0.9351646299999999,
+          "count": 5,
+          "successCount": 2,
+          "failureCount": 3,
+          "successRate": 0.4444444444444444,
+          "rawSuccessRate": 0.4
+        }
+      ]
+    },
+    "zombie": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "heartbeat_init",
+          "avgReward": 0.5,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "skeleton": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "heartbeat_init",
+          "avgReward": 0.5,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2026-01-07T06:30:46.541Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
