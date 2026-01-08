@@ -31,3 +31,4 @@
 {"timestamp":"2026-01-08T07:52:52.900Z","mobType":"vex","round":1110,"bootstrap":false}
 {"timestamp":"2026-01-08T07:59:57.335Z","mobType":"zombie","round":1111,"bootstrap":true}
 {"timestamp":"2026-01-08T07:59:57.950Z","mobType":"skeleton","round":1111,"bootstrap":true}
+{"timestamp":"2026-01-08T07:59:58.334Z","mobType":"creeper","round":1111,"bootstrap":true}
