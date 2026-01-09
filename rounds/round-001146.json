@@ -37,8 +37,8 @@
   "round": 1146,
   "timestamp": "2026-01-09T21:50:26.739Z",
   "contributors": {
-    "servers": 2,
-    "submissions": 6
+    "servers": 1295,
+    "submissions": 4
   },
   "mobTypes": [
     "defensive_guard",
@@ -404,7 +404,7 @@
     }
   },
   "metadata": {
-    "loggedAt": "2026-01-09T21:50:27.483Z",
+    "loggedAt": "2026-01-09T22:00:43.125Z",
     "source": "federation-coordinator",
     "version": "3.0.0"
   }
