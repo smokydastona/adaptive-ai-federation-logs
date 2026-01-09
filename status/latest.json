@@ -1,10 +1,10 @@
 {
-  "round": 1140,
-  "contributors": 3191,
-  "modelsInCurrentRound": 2,
-  "lastAggregation": "2026-01-09T19:34:01.033Z",
+  "round": 1142,
+  "contributors": 3192,
+  "modelsInCurrentRound": 1,
+  "lastAggregation": "2026-01-09T20:07:21.170Z",
   "hasGlobalModel": true,
-  "globalModelRound": 1139,
+  "globalModelRound": 1141,
   "github": {
     "enabled": true,
     "pendingRoundLogs": 0,
@@ -17,5 +17,5 @@
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-01-09T20:00:42.969Z"
+  "lastUpdated": "2026-01-09T21:00:46.109Z"
 }
