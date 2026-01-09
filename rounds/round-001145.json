@@ -1,0 +1,326 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 1145,
+  "timestamp": "2026-01-09T21:40:26.836Z",
+  "contributors": {
+    "servers": 2,
+    "submissions": 4
+  },
+  "mobTypes": [
+    "piglin",
+    "villagergolemhealerentity"
+  ],
+  "modelStats": {
+    "piglin": {
+      "distinctActionsObserved": 7,
+      "totalExperiences": 27,
+      "legacy": {}
+    },
+    "villagergolemhealerentity": {
+      "distinctActionsObserved": 3,
+      "totalExperiences": 5,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "piglin": {
+      "gold_detection": {
+        "avgReward": 3.8208548124999995,
+        "count": 4,
+        "successCount": 3,
+        "successRate": 0.6298611111111111,
+        "rawSuccessRate": 0.75,
+        "success": {
+          "successes": 3,
+          "attempts": 4,
+          "rate": 0.6298611111111111,
+          "smoothedRate": 0.6298611111111111,
+          "rawRate": 0.75
+        },
+        "legacy": {}
+      },
+      "trade_check": {
+        "avgReward": 43.439345853613275,
+        "count": 2,
+        "successCount": 1,
+        "successRate": 0.5653715587797619,
+        "rawSuccessRate": 0.5,
+        "success": {
+          "successes": 1,
+          "attempts": 2,
+          "rate": 0.5653715587797619,
+          "smoothedRate": 0.5653715587797619,
+          "rawRate": 0.5
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.10000000330023612,
+        "count": 10,
+        "successCount": 10,
+        "successRate": 0.8611139538948591,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 10,
+          "attempts": 10,
+          "rate": 0.8611139538948591,
+          "smoothedRate": 0.8611139538948591,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "bastion_defense": {
+        "avgReward": 14.141130286755654,
+        "count": 3,
+        "successCount": 3,
+        "successRate": 0.7016110248447205,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 3,
+          "attempts": 3,
+          "rate": 0.7016110248447205,
+          "smoothedRate": 0.7016110248447205,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "crossbow_attack": {
+        "avgReward": 45.87427720551595,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.6738909040178571,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.6738909040178571,
+          "smoothedRate": 0.6738909040178571,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "melee_rush": {
+        "avgReward": 29.248902821020806,
+        "count": 5,
+        "successCount": 5,
+        "successRate": 0.7552083333333334,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 5,
+          "attempts": 5,
+          "rate": 0.7552083333333334,
+          "smoothedRate": 0.7552083333333334,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "default_attack": {
+        "avgReward": 2.3450136,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "villagergolemhealerentity": {
+      "retreat_reload": {
+        "avgReward": 0,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4,
+          "smoothedRate": 0.4,
+          "rawRate": 0
+        },
+        "legacy": {}
+      },
+      "pack_coordination": {
+        "avgReward": 0.4415585,
+        "count": 2,
+        "successCount": 1,
+        "successRate": 0.5,
+        "rawSuccessRate": 0.5,
+        "success": {
+          "successes": 1,
+          "attempts": 2,
+          "rate": 0.5,
+          "smoothedRate": 0.5,
+          "rawRate": 0.5
+        },
+        "legacy": {}
+      },
+      "circle_strafe": {
+        "avgReward": 0.27641633,
+        "count": 2,
+        "successCount": 1,
+        "successRate": 0.5,
+        "rawSuccessRate": 0.5,
+        "success": {
+          "successes": 1,
+          "attempts": 2,
+          "rate": 0.5,
+          "smoothedRate": 0.5,
+          "rawRate": 0.5
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "piglin": {
+      "distinctActionsObserved": 7,
+      "topActions": [
+        {
+          "action": "crossbow_attack",
+          "avgReward": 45.87427720551595,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.6738909040178571,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "trade_check",
+          "avgReward": 43.439345853613275,
+          "count": 2,
+          "successCount": 1,
+          "failureCount": 1,
+          "successRate": 0.5653715587797619,
+          "rawSuccessRate": 0.5
+        },
+        {
+          "action": "melee_rush",
+          "avgReward": 29.248902821020806,
+          "count": 5,
+          "successCount": 5,
+          "failureCount": 0,
+          "successRate": 0.7552083333333334,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "bastion_defense",
+          "avgReward": 14.141130286755654,
+          "count": 3,
+          "successCount": 3,
+          "failureCount": 0,
+          "successRate": 0.7016110248447205,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "gold_detection",
+          "avgReward": 3.8208548124999995,
+          "count": 4,
+          "successCount": 3,
+          "failureCount": 1,
+          "successRate": 0.6298611111111111,
+          "rawSuccessRate": 0.75
+        },
+        {
+          "action": "default_attack",
+          "avgReward": 2.3450136,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.10000000330023612,
+          "count": 10,
+          "successCount": 10,
+          "failureCount": 0,
+          "successRate": 0.8611139538948591,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "villagergolemhealerentity": {
+      "distinctActionsObserved": 3,
+      "topActions": [
+        {
+          "action": "pack_coordination",
+          "avgReward": 0.4415585,
+          "count": 2,
+          "successCount": 1,
+          "failureCount": 1,
+          "successRate": 0.5,
+          "rawSuccessRate": 0.5
+        },
+        {
+          "action": "circle_strafe",
+          "avgReward": 0.27641633,
+          "count": 2,
+          "successCount": 1,
+          "failureCount": 1,
+          "successRate": 0.5,
+          "rawSuccessRate": 0.5
+        },
+        {
+          "action": "retreat_reload",
+          "avgReward": 0,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4,
+          "rawSuccessRate": 0
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2026-01-09T21:40:27.354Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
