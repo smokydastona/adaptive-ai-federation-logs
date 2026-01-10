@@ -33,3 +33,4 @@
 {"timestamp":"2026-01-10T15:27:31.849Z","mobType":"zombie","round":1164,"bootstrap":false}
 {"timestamp":"2026-01-10T16:07:56.607Z","mobType":"witch","round":1164,"bootstrap":false}
 {"timestamp":"2026-01-10T16:15:55.075Z","mobType":"strategic_defender","round":1165,"bootstrap":false}
+{"timestamp":"2026-01-10T16:20:55.080Z","mobType":"villagergolemhealerentity","round":1165,"bootstrap":false}
