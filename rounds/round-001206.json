@@ -37,8 +37,8 @@
   "round": 1206,
   "timestamp": "2026-01-12T00:58:03.671Z",
   "contributors": {
-    "servers": 1,
-    "submissions": 4
+    "servers": 1360,
+    "submissions": 3
   },
   "mobTypes": [
     "pillager",
@@ -380,7 +380,7 @@
     }
   },
   "metadata": {
-    "loggedAt": "2026-01-12T00:58:23.144Z",
+    "loggedAt": "2026-01-12T01:00:21.772Z",
     "source": "federation-coordinator",
     "version": "3.0.0"
   }
