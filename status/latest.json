@@ -1,21 +1,21 @@
 {
-  "round": 1240,
-  "contributors": 3398,
-  "modelsInCurrentRound": 1,
-  "lastAggregation": "2026-01-12T20:23:07.782Z",
+  "round": 1242,
+  "contributors": 3403,
+  "modelsInCurrentRound": 0,
+  "lastAggregation": "2026-01-12T22:47:29.200Z",
   "hasGlobalModel": true,
-  "globalModelRound": 1239,
+  "globalModelRound": 1241,
   "github": {
     "enabled": true,
     "pendingRoundLogs": 0,
     "lastError": {
-      "timestamp": "2026-01-12T08:46:49.891Z",
-      "message": "GitHub API error: 409 - {\"message\":\"is at e470a52eb4ceee3ce9e2568c059feefeca4e14d3 but expected 98aedb7c7731d187c3190b0ba4b5500cf2f1a34d\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
+      "timestamp": "2026-01-12T22:47:30.108Z",
+      "message": "GitHub API error: 409 - {\"message\":\"is at 66a694f0f55bcc8a32c69f80729a139624ef4e48 but expected 3ac3e5231f55eff26c12f4eb74709dc7f8590e76\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
     }
   },
   "worker": "healthy",
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-01-12T22:00:32.403Z"
+  "lastUpdated": "2026-01-12T23:00:30.504Z"
 }
