@@ -72,3 +72,4 @@
 {"timestamp":"2026-01-12T17:22:40.014Z","mobType":"zombie","round":1233,"bootstrap":false}
 {"timestamp":"2026-01-12T17:44:34.551Z","mobType":"zombie","round":1233,"bootstrap":true}
 {"timestamp":"2026-01-12T18:58:04.656Z","mobType":"strategic_defender","round":1234,"bootstrap":false}
+{"timestamp":"2026-01-12T19:05:22.921Z","mobType":"zombie","round":1234,"bootstrap":true}
