@@ -70,3 +70,4 @@
 {"timestamp":"2026-01-12T16:03:14.764Z","mobType":"witch","round":1232,"bootstrap":false}
 {"timestamp":"2026-01-12T16:22:05.964Z","mobType":"warden","round":1232,"bootstrap":false}
 {"timestamp":"2026-01-12T17:22:40.014Z","mobType":"zombie","round":1233,"bootstrap":false}
+{"timestamp":"2026-01-12T17:44:34.551Z","mobType":"zombie","round":1233,"bootstrap":true}
