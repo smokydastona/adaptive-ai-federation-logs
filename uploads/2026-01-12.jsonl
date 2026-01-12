@@ -26,3 +26,4 @@
 {"timestamp":"2026-01-12T03:43:06.394Z","mobType":"bat","round":1215,"bootstrap":false}
 {"timestamp":"2026-01-12T03:51:06.558Z","mobType":"bat","round":1216,"bootstrap":false}
 {"timestamp":"2026-01-12T03:51:29.222Z","mobType":"bat","round":1217,"bootstrap":false}
+{"timestamp":"2026-01-12T03:51:29.692Z","mobType":"piglin","round":1217,"bootstrap":true}
