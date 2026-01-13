@@ -35,3 +35,4 @@
 {"timestamp":"2026-01-13T18:05:28.456Z","mobType":"warden","round":1257,"bootstrap":false}
 {"timestamp":"2026-01-13T18:58:07.081Z","mobType":"pillager","round":1257,"bootstrap":false}
 {"timestamp":"2026-01-13T19:02:05.544Z","mobType":"warden","round":1258,"bootstrap":false}
+{"timestamp":"2026-01-13T21:13:44.162Z","mobType":"zombie","round":1258,"bootstrap":true}
