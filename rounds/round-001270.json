@@ -1,0 +1,206 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 1270,
+  "timestamp": "2026-01-14T01:33:51.185Z",
+  "contributors": {
+    "servers": 3,
+    "submissions": 3
+  },
+  "mobTypes": [
+    "piglin",
+    "witch"
+  ],
+  "modelStats": {
+    "piglin": {
+      "distinctActionsObserved": 2,
+      "totalExperiences": 4,
+      "legacy": {}
+    },
+    "witch": {
+      "distinctActionsObserved": 3,
+      "totalExperiences": 4,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "piglin": {
+      "bastion_defense": {
+        "avgReward": 0.2500000025,
+        "count": 3,
+        "successCount": 1,
+        "successRate": 0.4714285714285714,
+        "rawSuccessRate": 0.3333333333333333,
+        "success": {
+          "successes": 1,
+          "attempts": 3,
+          "rate": 0.4714285714285714,
+          "smoothedRate": 0.4714285714285714,
+          "rawRate": 0.3333333333333333
+        },
+        "legacy": {}
+      },
+      "trade_check": {
+        "avgReward": 0,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4,
+          "smoothedRate": 0.4,
+          "rawRate": 0
+        },
+        "legacy": {}
+      }
+    },
+    "witch": {
+      "straight_charge": {
+        "avgReward": 0.1,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.6666666666666666,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.6666666666666666,
+          "smoothedRate": 0.6666666666666666,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "heal_self": {
+        "avgReward": 10,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "potion_throw": {
+        "avgReward": 2,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "piglin": {
+      "distinctActionsObserved": 2,
+      "topActions": [
+        {
+          "action": "bastion_defense",
+          "avgReward": 0.2500000025,
+          "count": 3,
+          "successCount": 1,
+          "failureCount": 2,
+          "successRate": 0.4714285714285714,
+          "rawSuccessRate": 0.3333333333333333
+        },
+        {
+          "action": "trade_check",
+          "avgReward": 0,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4,
+          "rawSuccessRate": 0
+        }
+      ]
+    },
+    "witch": {
+      "distinctActionsObserved": 3,
+      "topActions": [
+        {
+          "action": "heal_self",
+          "avgReward": 10,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "potion_throw",
+          "avgReward": 2,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.1,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.6666666666666666,
+          "rawSuccessRate": 1
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2026-01-14T01:33:51.743Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
