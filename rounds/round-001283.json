@@ -37,8 +37,8 @@
   "round": 1283,
   "timestamp": "2026-01-14T20:59:34.059Z",
   "contributors": {
-    "servers": 2,
-    "submissions": 5
+    "servers": 1437,
+    "submissions": 3
   },
   "mobTypes": [
     "witch",
@@ -554,7 +554,7 @@
     }
   },
   "metadata": {
-    "loggedAt": "2026-01-14T20:59:55.676Z",
+    "loggedAt": "2026-01-14T21:00:26.980Z",
     "source": "federation-coordinator",
     "version": "3.0.0"
   }
