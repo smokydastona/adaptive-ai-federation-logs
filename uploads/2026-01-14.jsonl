@@ -45,3 +45,4 @@
 {"timestamp":"2026-01-14T18:44:22.230Z","mobType":"skeleton","round":1282,"bootstrap":true}
 {"timestamp":"2026-01-14T19:22:13.950Z","mobType":"witch","round":1283,"bootstrap":false}
 {"timestamp":"2026-01-14T20:59:33.795Z","mobType":"human2entity","round":1283,"bootstrap":false}
+{"timestamp":"2026-01-14T20:59:34.438Z","mobType":"berserker_guard","round":1283,"bootstrap":false}
