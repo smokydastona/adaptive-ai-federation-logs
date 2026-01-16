@@ -1,0 +1,291 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 1318,
+  "timestamp": "2026-01-16T15:01:11.119Z",
+  "contributors": {
+    "servers": 2,
+    "submissions": 4
+  },
+  "mobTypes": [
+    "skeleton",
+    "creeper",
+    "salmon"
+  ],
+  "modelStats": {
+    "skeleton": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    },
+    "creeper": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    },
+    "salmon": {
+      "distinctActionsObserved": 6,
+      "totalExperiences": 7563,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "skeleton": {
+      "heartbeat_init": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "creeper": {
+      "heartbeat_init": {
+        "avgReward": 0.5,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "salmon": {
+      "default_attack": {
+        "avgReward": 0.100675575,
+        "count": 2476,
+        "successCount": 2476,
+        "successRate": 0.9991935483870967,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2476,
+          "attempts": 2476,
+          "rate": 0.9991935483870967,
+          "smoothedRate": 0.9991935483870967,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "upstream_swim": {
+        "avgReward": 0.23716441,
+        "count": 1262,
+        "successCount": 1105,
+        "successRate": 0.8744075829383886,
+        "rawSuccessRate": 0.875594294770206,
+        "success": {
+          "successes": 1105,
+          "attempts": 1262,
+          "rate": 0.8744075829383886,
+          "smoothedRate": 0.8744075829383886,
+          "rawRate": 0.875594294770206
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.1,
+        "count": 3,
+        "successCount": 3,
+        "successRate": 0.7142857142857143,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 3,
+          "attempts": 3,
+          "rate": 0.7142857142857143,
+          "smoothedRate": 0.7142857142857143,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "flee_danger": {
+        "avgReward": 0.2534832,
+        "count": 1302,
+        "successCount": 1127,
+        "successRate": 0.8644716692189893,
+        "rawSuccessRate": 0.8655913978494624,
+        "success": {
+          "successes": 1127,
+          "attempts": 1302,
+          "rate": 0.8644716692189893,
+          "smoothedRate": 0.8644716692189893,
+          "rawRate": 0.8655913978494624
+        },
+        "legacy": {}
+      },
+      "spawning_journey": {
+        "avgReward": 0.24665716,
+        "count": 1241,
+        "successCount": 1109,
+        "successRate": 0.8923694779116466,
+        "rawSuccessRate": 0.8936341659951652,
+        "success": {
+          "successes": 1109,
+          "attempts": 1241,
+          "rate": 0.8923694779116466,
+          "smoothedRate": 0.8923694779116466,
+          "rawRate": 0.8936341659951652
+        },
+        "legacy": {}
+      },
+      "school_swim": {
+        "avgReward": 0.25499225,
+        "count": 1279,
+        "successCount": 1132,
+        "successRate": 0.8838659392049883,
+        "rawSuccessRate": 0.8850664581704457,
+        "success": {
+          "successes": 1132,
+          "attempts": 1279,
+          "rate": 0.8838659392049883,
+          "smoothedRate": 0.8838659392049883,
+          "rawRate": 0.8850664581704457
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "skeleton": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "heartbeat_init",
+          "avgReward": 0.5,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "creeper": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "heartbeat_init",
+          "avgReward": 0.5,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "salmon": {
+      "distinctActionsObserved": 6,
+      "topActions": [
+        {
+          "action": "school_swim",
+          "avgReward": 0.25499225,
+          "count": 1279,
+          "successCount": 1132,
+          "failureCount": 147,
+          "successRate": 0.8838659392049883,
+          "rawSuccessRate": 0.8850664581704457
+        },
+        {
+          "action": "flee_danger",
+          "avgReward": 0.2534832,
+          "count": 1302,
+          "successCount": 1127,
+          "failureCount": 175,
+          "successRate": 0.8644716692189893,
+          "rawSuccessRate": 0.8655913978494624
+        },
+        {
+          "action": "spawning_journey",
+          "avgReward": 0.24665716,
+          "count": 1241,
+          "successCount": 1109,
+          "failureCount": 132,
+          "successRate": 0.8923694779116466,
+          "rawSuccessRate": 0.8936341659951652
+        },
+        {
+          "action": "upstream_swim",
+          "avgReward": 0.23716441,
+          "count": 1262,
+          "successCount": 1105,
+          "failureCount": 157,
+          "successRate": 0.8744075829383886,
+          "rawSuccessRate": 0.875594294770206
+        },
+        {
+          "action": "default_attack",
+          "avgReward": 0.100675575,
+          "count": 2476,
+          "successCount": 2476,
+          "failureCount": 0,
+          "successRate": 0.9991935483870967,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.1,
+          "count": 3,
+          "successCount": 3,
+          "failureCount": 0,
+          "successRate": 0.7142857142857143,
+          "rawSuccessRate": 1
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2026-01-16T15:01:11.905Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
