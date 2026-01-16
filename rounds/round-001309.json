@@ -1,0 +1,411 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 1309,
+  "timestamp": "2026-01-16T06:20:28.961Z",
+  "contributors": {
+    "servers": 2,
+    "submissions": 3
+  },
+  "mobTypes": [
+    "vex",
+    "evoker",
+    "piglin"
+  ],
+  "modelStats": {
+    "vex": {
+      "distinctActionsObserved": 7,
+      "totalExperiences": 41,
+      "legacy": {}
+    },
+    "evoker": {
+      "distinctActionsObserved": 5,
+      "totalExperiences": 8,
+      "legacy": {}
+    },
+    "piglin": {
+      "distinctActionsObserved": 1,
+      "totalExperiences": 1,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "vex": {
+      "timed_existence": {
+        "avgReward": 4.8326726,
+        "count": 7,
+        "successCount": 7,
+        "successRate": 0.8181818181818182,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 7,
+          "attempts": 7,
+          "rate": 0.8181818181818182,
+          "smoothedRate": 0.8181818181818182,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "coordinated_swarm": {
+        "avgReward": 7.3595915,
+        "count": 7,
+        "successCount": 7,
+        "successRate": 0.8181818181818182,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 7,
+          "attempts": 7,
+          "rate": 0.8181818181818182,
+          "smoothedRate": 0.8181818181818182,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "sword_slash": {
+        "avgReward": 1.675,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.6666666666666666,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.6666666666666666,
+          "smoothedRate": 0.6666666666666666,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "phase_through_walls": {
+        "avgReward": 6.1602616,
+        "count": 6,
+        "successCount": 5,
+        "successRate": 0.7,
+        "rawSuccessRate": 0.8333333333333334,
+        "success": {
+          "successes": 5,
+          "attempts": 6,
+          "rate": 0.7,
+          "smoothedRate": 0.7,
+          "rawRate": 0.8333333333333334
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.10000002000000001,
+        "count": 11,
+        "successCount": 11,
+        "successRate": 0.8666666666666667,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 11,
+          "attempts": 11,
+          "rate": 0.8666666666666667,
+          "smoothedRate": 0.8666666666666667,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "default_attack": {
+        "avgReward": 1.5285714,
+        "count": 5,
+        "successCount": 5,
+        "successRate": 0.7777777777777778,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 5,
+          "attempts": 5,
+          "rate": 0.7777777777777778,
+          "smoothedRate": 0.7777777777777778,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "evoker_summoned": {
+        "avgReward": -0.007142862,
+        "count": 3,
+        "successCount": 2,
+        "successRate": 0.5714285714285714,
+        "rawSuccessRate": 0.6666666666666666,
+        "success": {
+          "successes": 2,
+          "attempts": 3,
+          "rate": 0.5714285714285714,
+          "smoothedRate": 0.5714285714285714,
+          "rawRate": 0.6666666666666666
+        },
+        "legacy": {}
+      }
+    },
+    "evoker": {
+      "vex_spawn": {
+        "avgReward": 0.71666675,
+        "count": 2,
+        "successCount": 1,
+        "successRate": 0.55,
+        "rawSuccessRate": 0.5,
+        "success": {
+          "successes": 1,
+          "attempts": 2,
+          "rate": 0.55,
+          "smoothedRate": 0.55,
+          "rawRate": 0.5
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.1,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.7,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.7,
+          "smoothedRate": 0.7,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "blue_sheep_convert": {
+        "avgReward": 2.8875,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "fang_summon": {
+        "avgReward": 0.34732142499999996,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.6818181818181819,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.6818181818181819,
+          "smoothedRate": 0.6818181818181819,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "totem_cheat_death": {
+        "avgReward": 11.975,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "piglin": {
+      "pack_coordination": {
+        "avgReward": 14.71875,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "vex": {
+      "distinctActionsObserved": 7,
+      "topActions": [
+        {
+          "action": "coordinated_swarm",
+          "avgReward": 7.3595915,
+          "count": 7,
+          "successCount": 7,
+          "failureCount": 0,
+          "successRate": 0.8181818181818182,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "phase_through_walls",
+          "avgReward": 6.1602616,
+          "count": 6,
+          "successCount": 5,
+          "failureCount": 1,
+          "successRate": 0.7,
+          "rawSuccessRate": 0.8333333333333334
+        },
+        {
+          "action": "timed_existence",
+          "avgReward": 4.8326726,
+          "count": 7,
+          "successCount": 7,
+          "failureCount": 0,
+          "successRate": 0.8181818181818182,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "sword_slash",
+          "avgReward": 1.675,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.6666666666666666,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "default_attack",
+          "avgReward": 1.5285714,
+          "count": 5,
+          "successCount": 5,
+          "failureCount": 0,
+          "successRate": 0.7777777777777778,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.10000002000000001,
+          "count": 11,
+          "successCount": 11,
+          "failureCount": 0,
+          "successRate": 0.8666666666666667,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "evoker_summoned",
+          "avgReward": -0.007142862,
+          "count": 3,
+          "successCount": 2,
+          "failureCount": 1,
+          "successRate": 0.5714285714285714,
+          "rawSuccessRate": 0.6666666666666666
+        }
+      ]
+    },
+    "evoker": {
+      "distinctActionsObserved": 5,
+      "topActions": [
+        {
+          "action": "totem_cheat_death",
+          "avgReward": 11.975,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "blue_sheep_convert",
+          "avgReward": 2.8875,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "vex_spawn",
+          "avgReward": 0.71666675,
+          "count": 2,
+          "successCount": 1,
+          "failureCount": 1,
+          "successRate": 0.55,
+          "rawSuccessRate": 0.5
+        },
+        {
+          "action": "fang_summon",
+          "avgReward": 0.34732142499999996,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.6818181818181819,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.1,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.7,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "piglin": {
+      "distinctActionsObserved": 1,
+      "topActions": [
+        {
+          "action": "pack_coordination",
+          "avgReward": 14.71875,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2026-01-16T06:20:29.879Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
