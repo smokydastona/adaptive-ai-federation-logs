@@ -25,3 +25,4 @@
 {"timestamp":"2026-01-16T15:01:11.119Z","mobType":"salmon","round":1318,"bootstrap":false}
 {"timestamp":"2026-01-16T15:10:19.913Z","mobType":"vindicator","round":1319,"bootstrap":false}
 {"timestamp":"2026-01-16T15:13:47.925Z","mobType":"zombie","round":1319,"bootstrap":true}
+{"timestamp":"2026-01-16T15:13:49.075Z","mobType":"creeper","round":1320,"bootstrap":true}
