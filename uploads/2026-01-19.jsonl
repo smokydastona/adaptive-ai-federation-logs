@@ -34,3 +34,4 @@
 {"timestamp":"2026-01-19T11:42:02.132Z","mobType":"bat","round":1375,"bootstrap":false}
 {"timestamp":"2026-01-19T11:47:18.871Z","mobType":"bat","round":1376,"bootstrap":false}
 {"timestamp":"2026-01-19T11:47:19.540Z","mobType":"aggressive_guard","round":1376,"bootstrap":false}
+{"timestamp":"2026-01-19T11:47:20.643Z","mobType":"defensive_guard","round":1377,"bootstrap":false}
