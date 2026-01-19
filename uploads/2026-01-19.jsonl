@@ -30,3 +30,4 @@
 {"timestamp":"2026-01-19T10:14:14.654Z","mobType":"warden","round":1373,"bootstrap":false}
 {"timestamp":"2026-01-19T11:29:02.186Z","mobType":"villager","round":1374,"bootstrap":false}
 {"timestamp":"2026-01-19T11:29:04.148Z","mobType":"tactical_guard","round":1375,"bootstrap":false}
+{"timestamp":"2026-01-19T11:29:04.819Z","mobType":"strategic_defender","round":1375,"bootstrap":false}
