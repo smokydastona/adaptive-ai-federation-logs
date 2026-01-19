@@ -43,3 +43,4 @@
 {"timestamp":"2026-01-19T15:02:16.170Z","mobType":"zombie","round":1380,"bootstrap":true}
 {"timestamp":"2026-01-19T15:10:10.652Z","mobType":"zombie","round":1381,"bootstrap":true}
 {"timestamp":"2026-01-19T15:10:11.453Z","mobType":"skeleton","round":1382,"bootstrap":true}
+{"timestamp":"2026-01-19T15:29:12.376Z","mobType":"cautious_defender","round":1382,"bootstrap":false}
