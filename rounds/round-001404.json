@@ -1,0 +1,1471 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 1404,
+  "timestamp": "2026-01-20T01:59:52.032Z",
+  "contributors": {
+    "servers": 2,
+    "submissions": 7
+  },
+  "mobTypes": [
+    "berserker_guard",
+    "aggressive_guard",
+    "tactical_guard",
+    "strategic_defender",
+    "defensive_guard",
+    "villagerentitymca",
+    "pillager"
+  ],
+  "modelStats": {
+    "berserker_guard": {
+      "distinctActionsObserved": 6,
+      "totalExperiences": 163,
+      "legacy": {}
+    },
+    "aggressive_guard": {
+      "distinctActionsObserved": 6,
+      "totalExperiences": 177,
+      "legacy": {}
+    },
+    "tactical_guard": {
+      "distinctActionsObserved": 7,
+      "totalExperiences": 90,
+      "legacy": {}
+    },
+    "strategic_defender": {
+      "distinctActionsObserved": 7,
+      "totalExperiences": 65,
+      "legacy": {}
+    },
+    "defensive_guard": {
+      "distinctActionsObserved": 7,
+      "totalExperiences": 57,
+      "legacy": {}
+    },
+    "villagerentitymca": {
+      "distinctActionsObserved": 26,
+      "totalExperiences": 474,
+      "legacy": {}
+    },
+    "pillager": {
+      "distinctActionsObserved": 2,
+      "totalExperiences": 2,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "berserker_guard": {
+      "no_mercy": {
+        "avgReward": 0.10000002,
+        "count": 17,
+        "successCount": 17,
+        "successRate": 0.9047619047619048,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 17,
+          "attempts": 17,
+          "rate": 0.9047619047619048,
+          "smoothedRate": 0.9047619047619048,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "suicide_rush": {
+        "avgReward": 0.5409725,
+        "count": 18,
+        "successCount": 18,
+        "successRate": 0.9090909090909091,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 18,
+          "attempts": 18,
+          "rate": 0.9090909090909091,
+          "smoothedRate": 0.9090909090909091,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "default_attack": {
+        "avgReward": 0.22234063,
+        "count": 47,
+        "successCount": 47,
+        "successRate": 0.9607843137254902,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 47,
+          "attempts": 47,
+          "rate": 0.9607843137254902,
+          "smoothedRate": 0.9607843137254902,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "aggressive_rush": {
+        "avgReward": 0.44510892,
+        "count": 23,
+        "successCount": 23,
+        "successRate": 0.9259259259259259,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 23,
+          "attempts": 23,
+          "rate": 0.9259259259259259,
+          "smoothedRate": 0.9259259259259259,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.099999964,
+        "count": 37,
+        "successCount": 37,
+        "successRate": 0.9512195121951219,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 37,
+          "attempts": 37,
+          "rate": 0.9512195121951219,
+          "smoothedRate": 0.9512195121951219,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "overwhelm": {
+        "avgReward": 0.10000001,
+        "count": 21,
+        "successCount": 21,
+        "successRate": 0.92,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 21,
+          "attempts": 21,
+          "rate": 0.92,
+          "smoothedRate": 0.92,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "aggressive_guard": {
+      "melee_rush": {
+        "avgReward": 0.5791669,
+        "count": 24,
+        "successCount": 24,
+        "successRate": 0.9285714285714286,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 24,
+          "attempts": 24,
+          "rate": 0.9285714285714286,
+          "smoothedRate": 0.9285714285714286,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.09999996,
+        "count": 39,
+        "successCount": 39,
+        "successRate": 0.9534883720930233,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 39,
+          "attempts": 39,
+          "rate": 0.9534883720930233,
+          "smoothedRate": 0.9534883720930233,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "pursue_relentlessly": {
+        "avgReward": 0.10000002,
+        "count": 17,
+        "successCount": 17,
+        "successRate": 0.9047619047619048,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 17,
+          "attempts": 17,
+          "rate": 0.9047619047619048,
+          "smoothedRate": 0.9047619047619048,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "default_attack": {
+        "avgReward": 0.3395836,
+        "count": 48,
+        "successCount": 48,
+        "successRate": 0.9615384615384616,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 48,
+          "attempts": 48,
+          "rate": 0.9615384615384616,
+          "smoothedRate": 0.9615384615384616,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "group_rush": {
+        "avgReward": 0.099999994,
+        "count": 25,
+        "successCount": 25,
+        "successRate": 0.9310344827586207,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 25,
+          "attempts": 25,
+          "rate": 0.9310344827586207,
+          "smoothedRate": 0.9310344827586207,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "overwhelm": {
+        "avgReward": 0.099999994,
+        "count": 24,
+        "successCount": 24,
+        "successRate": 0.9285714285714286,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 24,
+          "attempts": 24,
+          "rate": 0.9285714285714286,
+          "smoothedRate": 0.9285714285714286,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "tactical_guard": {
+      "coordinated_attack": {
+        "avgReward": 0.9214288,
+        "count": 14,
+        "successCount": 14,
+        "successRate": 0.8888888888888888,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 14,
+          "attempts": 14,
+          "rate": 0.8888888888888888,
+          "smoothedRate": 0.8888888888888888,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "fake_retreat": {
+        "avgReward": 0.10000002,
+        "count": 15,
+        "successCount": 15,
+        "successRate": 0.8947368421052632,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 15,
+          "attempts": 15,
+          "rate": 0.8947368421052632,
+          "smoothedRate": 0.8947368421052632,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "ambush": {
+        "avgReward": 0.10000002,
+        "count": 13,
+        "successCount": 13,
+        "successRate": 0.8823529411764706,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 13,
+          "attempts": 13,
+          "rate": 0.8823529411764706,
+          "smoothedRate": 0.8823529411764706,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.10000001,
+        "count": 8,
+        "successCount": 8,
+        "successRate": 0.8333333333333334,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 8,
+          "attempts": 8,
+          "rate": 0.8333333333333334,
+          "smoothedRate": 0.8333333333333334,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "default_attack": {
+        "avgReward": 0.34013155,
+        "count": 19,
+        "successCount": 19,
+        "successRate": 0.9130434782608695,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 19,
+          "attempts": 19,
+          "rate": 0.9130434782608695,
+          "smoothedRate": 0.9130434782608695,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "strafe_shoot": {
+        "avgReward": 1.5958335000000001,
+        "count": 15,
+        "successCount": 15,
+        "successRate": 0.8947368421052632,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 15,
+          "attempts": 15,
+          "rate": 0.8947368421052632,
+          "smoothedRate": 0.8947368421052632,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "circle_strafe": {
+        "avgReward": 0.1,
+        "count": 6,
+        "successCount": 6,
+        "successRate": 0.8,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 6,
+          "attempts": 6,
+          "rate": 0.8,
+          "smoothedRate": 0.8,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "strategic_defender": {
+      "tactical_retreat": {
+        "avgReward": 0.9660714,
+        "count": 7,
+        "successCount": 7,
+        "successRate": 0.8181818181818182,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 7,
+          "attempts": 7,
+          "rate": 0.8181818181818182,
+          "smoothedRate": 0.8181818181818182,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "group_formation": {
+        "avgReward": 0.10000000999999999,
+        "count": 9,
+        "successCount": 9,
+        "successRate": 0.8461538461538461,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 9,
+          "attempts": 9,
+          "rate": 0.8461538461538461,
+          "smoothedRate": 0.8461538461538461,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.10000001,
+        "count": 10,
+        "successCount": 10,
+        "successRate": 0.8571428571428571,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 10,
+          "attempts": 10,
+          "rate": 0.8571428571428571,
+          "smoothedRate": 0.8571428571428571,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "defend_home": {
+        "avgReward": 1.6875002,
+        "count": 10,
+        "successCount": 10,
+        "successRate": 0.8571428571428571,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 10,
+          "attempts": 10,
+          "rate": 0.8571428571428571,
+          "smoothedRate": 0.8571428571428571,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "default_attack": {
+        "avgReward": 0.10000001,
+        "count": 10,
+        "successCount": 10,
+        "successRate": 0.8571428571428571,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 10,
+          "attempts": 10,
+          "rate": 0.8571428571428571,
+          "smoothedRate": 0.8571428571428571,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "pack_coordination": {
+        "avgReward": 2.2437503,
+        "count": 10,
+        "successCount": 10,
+        "successRate": 0.8571428571428571,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 10,
+          "attempts": 10,
+          "rate": 0.8571428571428571,
+          "smoothedRate": 0.8571428571428571,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "village_patrol": {
+        "avgReward": 0.98194474,
+        "count": 9,
+        "successCount": 9,
+        "successRate": 0.8461538461538461,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 9,
+          "attempts": 9,
+          "rate": 0.8461538461538461,
+          "smoothedRate": 0.8461538461538461,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "defensive_guard": {
+      "area_control": {
+        "avgReward": 0.1,
+        "count": 4,
+        "successCount": 4,
+        "successRate": 0.75,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 4,
+          "attempts": 4,
+          "rate": 0.75,
+          "smoothedRate": 0.75,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "protect_villagers": {
+        "avgReward": 0.10000001,
+        "count": 8,
+        "successCount": 8,
+        "successRate": 0.8333333333333334,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 8,
+          "attempts": 8,
+          "rate": 0.8333333333333334,
+          "smoothedRate": 0.8333333333333334,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "circle_strafe": {
+        "avgReward": 0.10000001,
+        "count": 8,
+        "successCount": 8,
+        "successRate": 0.8333333333333334,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 8,
+          "attempts": 8,
+          "rate": 0.8333333333333334,
+          "smoothedRate": 0.8333333333333334,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "retreat_reload": {
+        "avgReward": 1.0583333,
+        "count": 6,
+        "successCount": 6,
+        "successRate": 0.8,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 6,
+          "attempts": 6,
+          "rate": 0.8,
+          "smoothedRate": 0.8,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "kite_backward": {
+        "avgReward": 0.9819446,
+        "count": 9,
+        "successCount": 9,
+        "successRate": 0.8461538461538461,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 9,
+          "attempts": 9,
+          "rate": 0.8461538461538461,
+          "smoothedRate": 0.8461538461538461,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.10000001000000001,
+        "count": 7,
+        "successCount": 7,
+        "successRate": 0.8181818181818182,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 7,
+          "attempts": 7,
+          "rate": 0.8181818181818182,
+          "smoothedRate": 0.8181818181818182,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "default_attack": {
+        "avgReward": 0.78750014,
+        "count": 15,
+        "successCount": 15,
+        "successRate": 0.8947368421052632,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 15,
+          "attempts": 15,
+          "rate": 0.8947368421052632,
+          "smoothedRate": 0.8947368421052632,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    },
+    "villagerentitymca": {
+      "village_patrol": {
+        "avgReward": 2.0568182,
+        "count": 11,
+        "successCount": 8,
+        "successRate": 0.6666666666666666,
+        "rawSuccessRate": 0.7272727272727273,
+        "success": {
+          "successes": 8,
+          "attempts": 11,
+          "rate": 0.6666666666666666,
+          "smoothedRate": 0.6666666666666666,
+          "rawRate": 0.7272727272727273
+        },
+        "legacy": {}
+      },
+      "defensive_stance": {
+        "avgReward": 0.37512004,
+        "count": 5,
+        "successCount": 4,
+        "successRate": 0.6666666666666666,
+        "rawSuccessRate": 0.8,
+        "success": {
+          "successes": 4,
+          "attempts": 5,
+          "rate": 0.6666666666666666,
+          "smoothedRate": 0.6666666666666666,
+          "rawRate": 0.8
+        },
+        "legacy": {}
+      },
+      "circle_strafe": {
+        "avgReward": 1.36875,
+        "count": 15,
+        "successCount": 9,
+        "successRate": 0.5789473684210527,
+        "rawSuccessRate": 0.6,
+        "success": {
+          "successes": 9,
+          "attempts": 15,
+          "rate": 0.5789473684210527,
+          "smoothedRate": 0.5789473684210527,
+          "rawRate": 0.6
+        },
+        "legacy": {}
+      },
+      "retreat": {
+        "avgReward": 1.1854167,
+        "count": 15,
+        "successCount": 12,
+        "successRate": 0.7368421052631579,
+        "rawSuccessRate": 0.8,
+        "success": {
+          "successes": 12,
+          "attempts": 15,
+          "rate": 0.7368421052631579,
+          "smoothedRate": 0.7368421052631579,
+          "rawRate": 0.8
+        },
+        "legacy": {}
+      },
+      "strafe_shoot": {
+        "avgReward": 0.32884616,
+        "count": 13,
+        "successCount": 8,
+        "successRate": 0.5882352941176471,
+        "rawSuccessRate": 0.6153846153846154,
+        "success": {
+          "successes": 8,
+          "attempts": 13,
+          "rate": 0.5882352941176471,
+          "smoothedRate": 0.5882352941176471,
+          "rawRate": 0.6153846153846154
+        },
+        "legacy": {}
+      },
+      "pack_coordination": {
+        "avgReward": 2.189732,
+        "count": 14,
+        "successCount": 12,
+        "successRate": 0.7777777777777778,
+        "rawSuccessRate": 0.8571428571428571,
+        "success": {
+          "successes": 12,
+          "attempts": 14,
+          "rate": 0.7777777777777778,
+          "smoothedRate": 0.7777777777777778,
+          "rawRate": 0.8571428571428571
+        },
+        "legacy": {}
+      },
+      "tactical_retreat": {
+        "avgReward": 1.75,
+        "count": 7,
+        "successCount": 4,
+        "successRate": 0.5454545454545454,
+        "rawSuccessRate": 0.5714285714285714,
+        "success": {
+          "successes": 4,
+          "attempts": 7,
+          "rate": 0.5454545454545454,
+          "smoothedRate": 0.5454545454545454,
+          "rawRate": 0.5714285714285714
+        },
+        "legacy": {}
+      },
+      "kite_backward": {
+        "avgReward": 2.8203125,
+        "count": 16,
+        "successCount": 11,
+        "successRate": 0.65,
+        "rawSuccessRate": 0.6875,
+        "success": {
+          "successes": 11,
+          "attempts": 16,
+          "rate": 0.65,
+          "smoothedRate": 0.65,
+          "rawRate": 0.6875
+        },
+        "legacy": {}
+      },
+      "melee_rush": {
+        "avgReward": 1.7150000000000003,
+        "count": 25,
+        "successCount": 17,
+        "successRate": 0.6551724137931034,
+        "rawSuccessRate": 0.68,
+        "success": {
+          "successes": 17,
+          "attempts": 25,
+          "rate": 0.6551724137931034,
+          "smoothedRate": 0.6551724137931034,
+          "rawRate": 0.68
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.59827304,
+        "count": 76,
+        "successCount": 47,
+        "successRate": 0.6125,
+        "rawSuccessRate": 0.618421052631579,
+        "success": {
+          "successes": 47,
+          "attempts": 76,
+          "rate": 0.6125,
+          "smoothedRate": 0.6125,
+          "rawRate": 0.618421052631579
+        },
+        "legacy": {}
+      },
+      "group_rush": {
+        "avgReward": 0.6530172,
+        "count": 29,
+        "successCount": 17,
+        "successRate": 0.5757575757575758,
+        "rawSuccessRate": 0.5862068965517241,
+        "success": {
+          "successes": 17,
+          "attempts": 29,
+          "rate": 0.5757575757575758,
+          "smoothedRate": 0.5757575757575758,
+          "rawRate": 0.5862068965517241
+        },
+        "legacy": {}
+      },
+      "area_control": {
+        "avgReward": 0.39843747,
+        "count": 4,
+        "successCount": 3,
+        "successRate": 0.625,
+        "rawSuccessRate": 0.75,
+        "success": {
+          "successes": 3,
+          "attempts": 4,
+          "rate": 0.625,
+          "smoothedRate": 0.625,
+          "rawRate": 0.75
+        },
+        "legacy": {}
+      },
+      "coordinated_attack": {
+        "avgReward": 0.46875,
+        "count": 11,
+        "successCount": 9,
+        "successRate": 0.7333333333333333,
+        "rawSuccessRate": 0.8181818181818182,
+        "success": {
+          "successes": 9,
+          "attempts": 11,
+          "rate": 0.7333333333333333,
+          "smoothedRate": 0.7333333333333333,
+          "rawRate": 0.8181818181818182
+        },
+        "legacy": {}
+      },
+      "fake_retreat": {
+        "avgReward": 2.2927632,
+        "count": 19,
+        "successCount": 18,
+        "successRate": 0.8695652173913043,
+        "rawSuccessRate": 0.9473684210526315,
+        "success": {
+          "successes": 18,
+          "attempts": 19,
+          "rate": 0.8695652173913043,
+          "smoothedRate": 0.8695652173913043,
+          "rawRate": 0.9473684210526315
+        },
+        "legacy": {}
+      },
+      "group_formation": {
+        "avgReward": 1.4890624,
+        "count": 12,
+        "successCount": 10,
+        "successRate": 0.75,
+        "rawSuccessRate": 0.8333333333333334,
+        "success": {
+          "successes": 10,
+          "attempts": 12,
+          "rate": 0.75,
+          "smoothedRate": 0.75,
+          "rawRate": 0.8333333333333334
+        },
+        "legacy": {}
+      },
+      "defend_home": {
+        "avgReward": 1.340625,
+        "count": 10,
+        "successCount": 6,
+        "successRate": 0.5714285714285714,
+        "rawSuccessRate": 0.6,
+        "success": {
+          "successes": 6,
+          "attempts": 10,
+          "rate": 0.5714285714285714,
+          "smoothedRate": 0.5714285714285714,
+          "rawRate": 0.6
+        },
+        "legacy": {}
+      },
+      "protect_villagers": {
+        "avgReward": 3.875,
+        "count": 11,
+        "successCount": 5,
+        "successRate": 0.4666666666666667,
+        "rawSuccessRate": 0.45454545454545453,
+        "success": {
+          "successes": 5,
+          "attempts": 11,
+          "rate": 0.4666666666666667,
+          "smoothedRate": 0.4666666666666667,
+          "rawRate": 0.45454545454545453
+        },
+        "legacy": {}
+      },
+      "no_mercy": {
+        "avgReward": 1.0723684,
+        "count": 19,
+        "successCount": 13,
+        "successRate": 0.6521739130434783,
+        "rawSuccessRate": 0.6842105263157895,
+        "success": {
+          "successes": 13,
+          "attempts": 19,
+          "rate": 0.6521739130434783,
+          "smoothedRate": 0.6521739130434783,
+          "rawRate": 0.6842105263157895
+        },
+        "legacy": {}
+      },
+      "find_cover": {
+        "avgReward": 0.6624999999999999,
+        "count": 10,
+        "successCount": 9,
+        "successRate": 0.7857142857142857,
+        "rawSuccessRate": 0.9,
+        "success": {
+          "successes": 9,
+          "attempts": 10,
+          "rate": 0.7857142857142857,
+          "smoothedRate": 0.7857142857142857,
+          "rawRate": 0.9
+        },
+        "legacy": {}
+      },
+      "ambush": {
+        "avgReward": 0.08541667,
+        "count": 15,
+        "successCount": 4,
+        "successRate": 0.3157894736842105,
+        "rawSuccessRate": 0.26666666666666666,
+        "success": {
+          "successes": 4,
+          "attempts": 15,
+          "rate": 0.3157894736842105,
+          "smoothedRate": 0.3157894736842105,
+          "rawRate": 0.26666666666666666
+        },
+        "legacy": {}
+      },
+      "wait_for_backup": {
+        "avgReward": 0.95089287,
+        "count": 14,
+        "successCount": 8,
+        "successRate": 0.5555555555555556,
+        "rawSuccessRate": 0.5714285714285714,
+        "success": {
+          "successes": 8,
+          "attempts": 14,
+          "rate": 0.5555555555555556,
+          "smoothedRate": 0.5555555555555556,
+          "rawRate": 0.5714285714285714
+        },
+        "legacy": {}
+      },
+      "pursue_relentlessly": {
+        "avgReward": 1.2171875,
+        "count": 20,
+        "successCount": 13,
+        "successRate": 0.625,
+        "rawSuccessRate": 0.65,
+        "success": {
+          "successes": 13,
+          "attempts": 20,
+          "rate": 0.625,
+          "smoothedRate": 0.625,
+          "rawRate": 0.65
+        },
+        "legacy": {}
+      },
+      "aggressive_rush": {
+        "avgReward": 1.5904018,
+        "count": 28,
+        "successCount": 21,
+        "successRate": 0.71875,
+        "rawSuccessRate": 0.75,
+        "success": {
+          "successes": 21,
+          "attempts": 28,
+          "rate": 0.71875,
+          "smoothedRate": 0.71875,
+          "rawRate": 0.75
+        },
+        "legacy": {}
+      },
+      "overwhelm": {
+        "avgReward": 0.8679847,
+        "count": 49,
+        "successCount": 34,
+        "successRate": 0.6792452830188679,
+        "rawSuccessRate": 0.6938775510204082,
+        "success": {
+          "successes": 34,
+          "attempts": 49,
+          "rate": 0.6792452830188679,
+          "smoothedRate": 0.6792452830188679,
+          "rawRate": 0.6938775510204082
+        },
+        "legacy": {}
+      },
+      "retreat_reload": {
+        "avgReward": 0.20703126000000002,
+        "count": 8,
+        "successCount": 3,
+        "successRate": 0.4166666666666667,
+        "rawSuccessRate": 0.375,
+        "success": {
+          "successes": 3,
+          "attempts": 8,
+          "rate": 0.4166666666666667,
+          "smoothedRate": 0.4166666666666667,
+          "rawRate": 0.375
+        },
+        "legacy": {}
+      },
+      "suicide_rush": {
+        "avgReward": 0.578125,
+        "count": 18,
+        "successCount": 16,
+        "successRate": 0.8181818181818182,
+        "rawSuccessRate": 0.8888888888888888,
+        "success": {
+          "successes": 16,
+          "attempts": 18,
+          "rate": 0.8181818181818182,
+          "smoothedRate": 0.8181818181818182,
+          "rawRate": 0.8888888888888888
+        },
+        "legacy": {}
+      }
+    },
+    "pillager": {
+      "straight_charge": {
+        "avgReward": 0.10000000000732423,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.6080602177770146,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.6080602177770146,
+          "smoothedRate": 0.6080602177770146,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "raid_coordination": {
+        "avgReward": 0.3787109375,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.45917968750000004,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.45917968750000004,
+          "smoothedRate": 0.45917968750000004,
+          "rawRate": 0
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "berserker_guard": {
+      "distinctActionsObserved": 6,
+      "topActions": [
+        {
+          "action": "suicide_rush",
+          "avgReward": 0.5409725,
+          "count": 18,
+          "successCount": 18,
+          "failureCount": 0,
+          "successRate": 0.9090909090909091,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "aggressive_rush",
+          "avgReward": 0.44510892,
+          "count": 23,
+          "successCount": 23,
+          "failureCount": 0,
+          "successRate": 0.9259259259259259,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "default_attack",
+          "avgReward": 0.22234063,
+          "count": 47,
+          "successCount": 47,
+          "failureCount": 0,
+          "successRate": 0.9607843137254902,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "no_mercy",
+          "avgReward": 0.10000002,
+          "count": 17,
+          "successCount": 17,
+          "failureCount": 0,
+          "successRate": 0.9047619047619048,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "overwhelm",
+          "avgReward": 0.10000001,
+          "count": 21,
+          "successCount": 21,
+          "failureCount": 0,
+          "successRate": 0.92,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.099999964,
+          "count": 37,
+          "successCount": 37,
+          "failureCount": 0,
+          "successRate": 0.9512195121951219,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "aggressive_guard": {
+      "distinctActionsObserved": 6,
+      "topActions": [
+        {
+          "action": "melee_rush",
+          "avgReward": 0.5791669,
+          "count": 24,
+          "successCount": 24,
+          "failureCount": 0,
+          "successRate": 0.9285714285714286,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "default_attack",
+          "avgReward": 0.3395836,
+          "count": 48,
+          "successCount": 48,
+          "failureCount": 0,
+          "successRate": 0.9615384615384616,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "pursue_relentlessly",
+          "avgReward": 0.10000002,
+          "count": 17,
+          "successCount": 17,
+          "failureCount": 0,
+          "successRate": 0.9047619047619048,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "group_rush",
+          "avgReward": 0.099999994,
+          "count": 25,
+          "successCount": 25,
+          "failureCount": 0,
+          "successRate": 0.9310344827586207,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "overwhelm",
+          "avgReward": 0.099999994,
+          "count": 24,
+          "successCount": 24,
+          "failureCount": 0,
+          "successRate": 0.9285714285714286,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.09999996,
+          "count": 39,
+          "successCount": 39,
+          "failureCount": 0,
+          "successRate": 0.9534883720930233,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "tactical_guard": {
+      "distinctActionsObserved": 7,
+      "topActions": [
+        {
+          "action": "strafe_shoot",
+          "avgReward": 1.5958335000000001,
+          "count": 15,
+          "successCount": 15,
+          "failureCount": 0,
+          "successRate": 0.8947368421052632,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "coordinated_attack",
+          "avgReward": 0.9214288,
+          "count": 14,
+          "successCount": 14,
+          "failureCount": 0,
+          "successRate": 0.8888888888888888,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "default_attack",
+          "avgReward": 0.34013155,
+          "count": 19,
+          "successCount": 19,
+          "failureCount": 0,
+          "successRate": 0.9130434782608695,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "fake_retreat",
+          "avgReward": 0.10000002,
+          "count": 15,
+          "successCount": 15,
+          "failureCount": 0,
+          "successRate": 0.8947368421052632,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "ambush",
+          "avgReward": 0.10000002,
+          "count": 13,
+          "successCount": 13,
+          "failureCount": 0,
+          "successRate": 0.8823529411764706,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.10000001,
+          "count": 8,
+          "successCount": 8,
+          "failureCount": 0,
+          "successRate": 0.8333333333333334,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "circle_strafe",
+          "avgReward": 0.1,
+          "count": 6,
+          "successCount": 6,
+          "failureCount": 0,
+          "successRate": 0.8,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "strategic_defender": {
+      "distinctActionsObserved": 7,
+      "topActions": [
+        {
+          "action": "pack_coordination",
+          "avgReward": 2.2437503,
+          "count": 10,
+          "successCount": 10,
+          "failureCount": 0,
+          "successRate": 0.8571428571428571,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "defend_home",
+          "avgReward": 1.6875002,
+          "count": 10,
+          "successCount": 10,
+          "failureCount": 0,
+          "successRate": 0.8571428571428571,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "village_patrol",
+          "avgReward": 0.98194474,
+          "count": 9,
+          "successCount": 9,
+          "failureCount": 0,
+          "successRate": 0.8461538461538461,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "tactical_retreat",
+          "avgReward": 0.9660714,
+          "count": 7,
+          "successCount": 7,
+          "failureCount": 0,
+          "successRate": 0.8181818181818182,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.10000001,
+          "count": 10,
+          "successCount": 10,
+          "failureCount": 0,
+          "successRate": 0.8571428571428571,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "default_attack",
+          "avgReward": 0.10000001,
+          "count": 10,
+          "successCount": 10,
+          "failureCount": 0,
+          "successRate": 0.8571428571428571,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "group_formation",
+          "avgReward": 0.10000000999999999,
+          "count": 9,
+          "successCount": 9,
+          "failureCount": 0,
+          "successRate": 0.8461538461538461,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "defensive_guard": {
+      "distinctActionsObserved": 7,
+      "topActions": [
+        {
+          "action": "retreat_reload",
+          "avgReward": 1.0583333,
+          "count": 6,
+          "successCount": 6,
+          "failureCount": 0,
+          "successRate": 0.8,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "kite_backward",
+          "avgReward": 0.9819446,
+          "count": 9,
+          "successCount": 9,
+          "failureCount": 0,
+          "successRate": 0.8461538461538461,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "default_attack",
+          "avgReward": 0.78750014,
+          "count": 15,
+          "successCount": 15,
+          "failureCount": 0,
+          "successRate": 0.8947368421052632,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.10000001000000001,
+          "count": 7,
+          "successCount": 7,
+          "failureCount": 0,
+          "successRate": 0.8181818181818182,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "protect_villagers",
+          "avgReward": 0.10000001,
+          "count": 8,
+          "successCount": 8,
+          "failureCount": 0,
+          "successRate": 0.8333333333333334,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "circle_strafe",
+          "avgReward": 0.10000001,
+          "count": 8,
+          "successCount": 8,
+          "failureCount": 0,
+          "successRate": 0.8333333333333334,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "area_control",
+          "avgReward": 0.1,
+          "count": 4,
+          "successCount": 4,
+          "failureCount": 0,
+          "successRate": 0.75,
+          "rawSuccessRate": 1
+        }
+      ]
+    },
+    "villagerentitymca": {
+      "distinctActionsObserved": 26,
+      "topActions": [
+        {
+          "action": "protect_villagers",
+          "avgReward": 3.875,
+          "count": 11,
+          "successCount": 5,
+          "failureCount": 6,
+          "successRate": 0.4666666666666667,
+          "rawSuccessRate": 0.45454545454545453
+        },
+        {
+          "action": "kite_backward",
+          "avgReward": 2.8203125,
+          "count": 16,
+          "successCount": 11,
+          "failureCount": 5,
+          "successRate": 0.65,
+          "rawSuccessRate": 0.6875
+        },
+        {
+          "action": "fake_retreat",
+          "avgReward": 2.2927632,
+          "count": 19,
+          "successCount": 18,
+          "failureCount": 1,
+          "successRate": 0.8695652173913043,
+          "rawSuccessRate": 0.9473684210526315
+        },
+        {
+          "action": "pack_coordination",
+          "avgReward": 2.189732,
+          "count": 14,
+          "successCount": 12,
+          "failureCount": 2,
+          "successRate": 0.7777777777777778,
+          "rawSuccessRate": 0.8571428571428571
+        },
+        {
+          "action": "village_patrol",
+          "avgReward": 2.0568182,
+          "count": 11,
+          "successCount": 8,
+          "failureCount": 3,
+          "successRate": 0.6666666666666666,
+          "rawSuccessRate": 0.7272727272727273
+        },
+        {
+          "action": "tactical_retreat",
+          "avgReward": 1.75,
+          "count": 7,
+          "successCount": 4,
+          "failureCount": 3,
+          "successRate": 0.5454545454545454,
+          "rawSuccessRate": 0.5714285714285714
+        },
+        {
+          "action": "melee_rush",
+          "avgReward": 1.7150000000000003,
+          "count": 25,
+          "successCount": 17,
+          "failureCount": 8,
+          "successRate": 0.6551724137931034,
+          "rawSuccessRate": 0.68
+        },
+        {
+          "action": "aggressive_rush",
+          "avgReward": 1.5904018,
+          "count": 28,
+          "successCount": 21,
+          "failureCount": 7,
+          "successRate": 0.71875,
+          "rawSuccessRate": 0.75
+        },
+        {
+          "action": "group_formation",
+          "avgReward": 1.4890624,
+          "count": 12,
+          "successCount": 10,
+          "failureCount": 2,
+          "successRate": 0.75,
+          "rawSuccessRate": 0.8333333333333334
+        },
+        {
+          "action": "circle_strafe",
+          "avgReward": 1.36875,
+          "count": 15,
+          "successCount": 9,
+          "failureCount": 6,
+          "successRate": 0.5789473684210527,
+          "rawSuccessRate": 0.6
+        }
+      ]
+    },
+    "pillager": {
+      "distinctActionsObserved": 2,
+      "topActions": [
+        {
+          "action": "raid_coordination",
+          "avgReward": 0.3787109375,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.45917968750000004,
+          "rawSuccessRate": 0
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.10000000000732423,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.6080602177770146,
+          "rawSuccessRate": 1
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2026-01-20T01:59:53.502Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
