@@ -9,13 +9,13 @@
     "enabled": true,
     "pendingRoundLogs": 0,
     "lastError": {
-      "timestamp": "2026-01-22T10:13:42.435Z",
-      "message": "GitHub API error: 409 - {\"message\":\"is at 53a9c697514fd3a218203940672e6ea9694f310c but expected 762ae91a59ac44e3646cf3c3ee8ac88a46af5dc9\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
+      "timestamp": "2026-01-22T14:02:45.226Z",
+      "message": "GitHub API error: 401 - {\r\n  \"message\": \"Requires authentication\",\r\n  \"documentation_url\": \"https://docs.github.com/rest\",\r\n  \"status\": \"401\"\r\n}"
     }
   },
   "worker": "healthy",
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-01-22T14:00:55.560Z"
+  "lastUpdated": "2026-01-22T15:00:59.234Z"
 }
