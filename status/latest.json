@@ -1,21 +1,21 @@
 {
-  "round": 1447,
-  "contributors": 3897,
-  "modelsInCurrentRound": 2,
-  "lastAggregation": "2026-01-24T11:46:56.039Z",
+  "round": 1448,
+  "contributors": 3899,
+  "modelsInCurrentRound": 1,
+  "lastAggregation": "2026-01-24T16:03:28.977Z",
   "hasGlobalModel": true,
-  "globalModelRound": 1446,
+  "globalModelRound": 1447,
   "github": {
     "enabled": true,
     "pendingRoundLogs": 0,
     "lastError": {
-      "timestamp": "2026-01-22T14:02:45.226Z",
-      "message": "GitHub API error: 401 - {\r\n  \"message\": \"Requires authentication\",\r\n  \"documentation_url\": \"https://docs.github.com/rest\",\r\n  \"status\": \"401\"\r\n}"
+      "timestamp": "2026-01-24T16:03:29.805Z",
+      "message": "GitHub API error: 409 - {\"message\":\"is at 4a5ab1088430b5887a579ba4ad235c42733d10cb but expected b8162076d71b67fcae5a5e1195cdec6e67922e89\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
     }
   },
   "worker": "healthy",
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-01-24T16:01:03.471Z"
+  "lastUpdated": "2026-01-24T17:01:04.889Z"
 }
