@@ -9,13 +9,13 @@
     "enabled": true,
     "pendingRoundLogs": 0,
     "lastError": {
-      "timestamp": "2026-02-26T05:03:27.448Z",
-      "message": "GitHub API error: 409 - {\"message\":\"is at 617ec53548d173be34d456c789f1cb6822675b56 but expected 94aad7dc7c8f6f1ace93c04e2b6385ec71abd00a\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
+      "timestamp": "2026-02-26T14:01:15.374Z",
+      "message": "GitHub API error: 422 - {\"message\":\"Invalid request.\\n\\n\\\"sha\\\" wasn't supplied.\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"422\"}"
     }
   },
   "worker": "healthy",
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-02-26T14:01:15.500Z"
+  "lastUpdated": "2026-02-26T15:00:55.807Z"
 }
