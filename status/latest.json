@@ -1,21 +1,21 @@
 {
-  "round": 1654,
-  "contributors": 4510,
-  "modelsInCurrentRound": 2,
-  "lastAggregation": "2026-03-08T21:33:13.167Z",
+  "round": 1655,
+  "contributors": 4511,
+  "modelsInCurrentRound": 0,
+  "lastAggregation": "2026-03-11T12:48:27.352Z",
   "hasGlobalModel": true,
-  "globalModelRound": 1653,
+  "globalModelRound": 1654,
   "github": {
     "enabled": true,
     "pendingRoundLogs": 0,
     "lastError": {
-      "timestamp": "2026-03-06T14:07:26.933Z",
-      "message": "GitHub API error: 522 - error code: 522"
+      "timestamp": "2026-03-11T12:48:28.206Z",
+      "message": "GitHub API error: 409 - {\"message\":\"is at deb3f6ec2e2ef437598ba961c2ecdb14600340c2 but expected c12db4e3283bb5bf0e083efaed62d3c0d1481f44\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
     }
   },
   "worker": "healthy",
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-03-11T12:00:56.722Z"
+  "lastUpdated": "2026-03-11T13:00:56.695Z"
 }
