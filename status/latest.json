@@ -1,21 +1,21 @@
 {
-  "round": 1667,
-  "contributors": 4550,
-  "modelsInCurrentRound": 2,
-  "lastAggregation": "2026-03-13T18:12:27.387Z",
+  "round": 1668,
+  "contributors": 4552,
+  "modelsInCurrentRound": 1,
+  "lastAggregation": "2026-03-14T15:42:43.033Z",
   "hasGlobalModel": true,
-  "globalModelRound": 1666,
+  "globalModelRound": 1667,
   "github": {
     "enabled": true,
     "pendingRoundLogs": 0,
     "lastError": {
-      "timestamp": "2026-03-13T15:00:41.973Z",
-      "message": "GitHub API error: 422 - {\"message\":\"Invalid request.\\n\\n\\\"sha\\\" wasn't supplied.\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"422\"}"
+      "timestamp": "2026-03-14T15:42:44.127Z",
+      "message": "GitHub API error: 409 - {\"message\":\"is at 8c1b2e49a2f45c8c29433e916e6d60cebfecf522 but expected 52e6dab8c1cdeacd051a711d68ae3910eed9bd48\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
     }
   },
   "worker": "healthy",
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-03-14T15:00:21.138Z"
+  "lastUpdated": "2026-03-14T16:00:20.649Z"
 }
