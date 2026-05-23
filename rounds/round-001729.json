@@ -1,0 +1,254 @@
+{
+  "schema": {
+    "name": "mca-ai-enhanced.federation.round",
+    "version": 2,
+    "description": "One file per federation round: metadata + full aggregated tactics snapshot (privacy-safe)"
+  },
+  "privacy": {
+    "personalData": false,
+    "notes": [
+      "No player identifiers (UUID/name/IP) are stored.",
+      "No server identifiers are stored; only aggregate counts."
+    ]
+  },
+  "semantics": {
+    "contributors": {
+      "meaning": "Aggregate counts only (no identifiers). `submissions` reflects distinct serverId+mobType contributions for the round; `servers` reflects distinct server contributors for the round."
+    },
+    "reward": {
+      "meaning": "Average tactical reward signal emitted by the mod. This is an internal, unitless score used for ranking/pruning tactics.",
+      "normalized": false,
+      "units": "arbitrary",
+      "notes": [
+        "Reward is computed client-side and may change across mod versions.",
+        "Do not assume a fixed numeric range; treat as relative within the same schema/version."
+      ]
+    },
+    "success": {
+      "meaning": "Per-action outcome tracking aggregated across contributing samples. Counts are always authoritative; rates are derived views.",
+      "notes": [
+        "`successCount` and `count` are the authoritative counts (successes and attempts).",
+        "`rawSuccessRate` is the binomial rate derived from counts: successCount / count.",
+        "`successRate` is a smoothed/blended score used for ranking/selection and may differ from rawSuccessRate.",
+        "For low attempts, rates have low confidence; prefer using (successCount, count) over rate alone."
+      ]
+    }
+  },
+  "round": 1729,
+  "timestamp": "2026-05-23T04:45:31.545Z",
+  "contributors": {
+    "servers": 2,
+    "submissions": 3
+  },
+  "mobTypes": [
+    "ignis_entity",
+    "slime"
+  ],
+  "modelStats": {
+    "ignis_entity": {
+      "distinctActionsObserved": 5,
+      "totalExperiences": 8,
+      "legacy": {}
+    },
+    "slime": {
+      "distinctActionsObserved": 2,
+      "totalExperiences": 6,
+      "legacy": {}
+    }
+  },
+  "aggregation": {
+    "method": "FedAvg",
+    "workerVersion": "3.0.0"
+  },
+  "tactics": {
+    "ignis_entity": {
+      "retreat_reload": {
+        "avgReward": 0.5679157925,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.6,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.6,
+          "smoothedRate": 0.6,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "default_attack": {
+        "avgReward": 0.030516868125,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.5874999999999999,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.5874999999999999,
+          "smoothedRate": 0.5874999999999999,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "counter_attack": {
+        "avgReward": -0.07500003,
+        "count": 2,
+        "successCount": 1,
+        "successRate": 0.5,
+        "rawSuccessRate": 0.5,
+        "success": {
+          "successes": 1,
+          "attempts": 2,
+          "rate": 0.5,
+          "smoothedRate": 0.5,
+          "rawRate": 0.5
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.1,
+        "count": 2,
+        "successCount": 2,
+        "successRate": 0.6553571428571429,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 2,
+          "attempts": 2,
+          "rate": 0.6553571428571429,
+          "smoothedRate": 0.6553571428571429,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "overhead_combo": {
+        "avgReward": 0.09282234,
+        "count": 1,
+        "successCount": 0,
+        "successRate": 0.4666666666666667,
+        "rawSuccessRate": 0,
+        "success": {
+          "successes": 0,
+          "attempts": 1,
+          "rate": 0.4666666666666667,
+          "smoothedRate": 0.4666666666666667,
+          "rawRate": 0
+        },
+        "legacy": {}
+      }
+    },
+    "slime": {
+      "bounce_attack": {
+        "avgReward": 0.605068455078125,
+        "count": 1,
+        "successCount": 1,
+        "successRate": 0.5885416666666666,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 1,
+          "attempts": 1,
+          "rate": 0.5885416666666666,
+          "smoothedRate": 0.5885416666666666,
+          "rawRate": 1
+        },
+        "legacy": {}
+      },
+      "straight_charge": {
+        "avgReward": 0.10000000313419916,
+        "count": 5,
+        "successCount": 5,
+        "successRate": 0.8066065062388592,
+        "rawSuccessRate": 1,
+        "success": {
+          "successes": 5,
+          "attempts": 5,
+          "rate": 0.8066065062388592,
+          "smoothedRate": 0.8066065062388592,
+          "rawRate": 1
+        },
+        "legacy": {}
+      }
+    }
+  },
+  "mobTypeSummary": {
+    "ignis_entity": {
+      "distinctActionsObserved": 5,
+      "topActions": [
+        {
+          "action": "retreat_reload",
+          "avgReward": 0.5679157925,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.6,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.1,
+          "count": 2,
+          "successCount": 2,
+          "failureCount": 0,
+          "successRate": 0.6553571428571429,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "overhead_combo",
+          "avgReward": 0.09282234,
+          "count": 1,
+          "successCount": 0,
+          "failureCount": 1,
+          "successRate": 0.4666666666666667,
+          "rawSuccessRate": 0
+        },
+        {
+          "action": "default_attack",
+          "avgReward": 0.030516868125,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.5874999999999999,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "counter_attack",
+          "avgReward": -0.07500003,
+          "count": 2,
+          "successCount": 1,
+          "failureCount": 1,
+          "successRate": 0.5,
+          "rawSuccessRate": 0.5
+        }
+      ]
+    },
+    "slime": {
+      "distinctActionsObserved": 2,
+      "topActions": [
+        {
+          "action": "bounce_attack",
+          "avgReward": 0.605068455078125,
+          "count": 1,
+          "successCount": 1,
+          "failureCount": 0,
+          "successRate": 0.5885416666666666,
+          "rawSuccessRate": 1
+        },
+        {
+          "action": "straight_charge",
+          "avgReward": 0.10000000313419916,
+          "count": 5,
+          "successCount": 5,
+          "failureCount": 0,
+          "successRate": 0.8066065062388592,
+          "rawSuccessRate": 1
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "loggedAt": "2026-05-23T04:46:13.318Z",
+    "source": "federation-coordinator",
+    "version": "3.0.0"
+  }
+}
