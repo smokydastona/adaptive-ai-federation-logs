@@ -1,7 +1,7 @@
 {
   "round": 1816,
-  "contributors": 4990,
-  "modelsInCurrentRound": 0,
+  "contributors": 4991,
+  "modelsInCurrentRound": 1,
   "lastAggregation": "2026-07-25T19:37:50.621Z",
   "hasGlobalModel": true,
   "globalModelRound": 1815,
@@ -17,5 +17,5 @@
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-07-25T22:00:54.246Z"
+  "lastUpdated": "2026-07-25T23:00:54.061Z"
 }
