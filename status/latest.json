@@ -9,13 +9,13 @@
     "enabled": true,
     "pendingRoundLogs": 0,
     "lastError": {
-      "timestamp": "2026-09-06T13:01:25.835Z",
-      "message": "GitHub API error: 409 - {\"message\":\"is at 35f421c73edc0e6edeb723b191370e26b027db05 but expected a2f2b472b9daeda4bc7bb82818d5d2a2ce43cc5c\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
+      "timestamp": "2026-09-06T19:00:26.842Z",
+      "message": "GitHub API error: 409 - {\"message\":\"Repository rule violations found\\n\\nTimed out validating rule, please try again\\n\\n\",\"metadata\":{},\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
     }
   },
   "worker": "healthy",
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-09-06T19:00:26.901Z"
+  "lastUpdated": "2026-09-06T20:00:20.635Z"
 }
