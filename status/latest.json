@@ -1,21 +1,21 @@
 {
-  "round": 1949,
-  "contributors": 5389,
+  "round": 1950,
+  "contributors": 5392,
   "modelsInCurrentRound": 0,
-  "lastAggregation": "2026-09-12T18:02:47.146Z",
+  "lastAggregation": "2026-09-13T20:57:36.071Z",
   "hasGlobalModel": true,
-  "globalModelRound": 1948,
+  "globalModelRound": 1949,
   "github": {
     "enabled": true,
     "pendingRoundLogs": 0,
     "lastError": {
-      "timestamp": "2026-09-13T09:00:36.569Z",
-      "message": "GitHub API error: 409 - {\"message\":\"Repository rule violations found\\n\\nTimed out validating rule, please try again\\n\\n\",\"metadata\":{},\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
+      "timestamp": "2026-09-13T20:57:37.067Z",
+      "message": "GitHub API error: 409 - {\"message\":\"is at 2ab4aa3644a0144d18c31c8f649268bc39b4dc7d but expected 76395e2454a7fd5a10c4b0f431dfd3de63776381\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
     }
   },
   "worker": "healthy",
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-09-13T20:00:29.117Z"
+  "lastUpdated": "2026-09-13T21:00:28.999Z"
 }
