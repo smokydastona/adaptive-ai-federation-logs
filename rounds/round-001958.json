@@ -37,7 +37,7 @@
   "round": 1958,
   "timestamp": "2026-09-24T20:24:19.150Z",
   "contributors": {
-    "servers": 3,
+    "servers": 2572,
     "submissions": 3
   },
   "mobTypes": [
@@ -127,7 +127,7 @@
     }
   },
   "metadata": {
-    "loggedAt": "2026-09-24T20:24:19.758Z",
+    "loggedAt": "2026-09-24T21:01:28.900Z",
     "source": "federation-coordinator",
     "version": "3.0.0"
   }
