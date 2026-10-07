@@ -9,13 +9,13 @@
     "enabled": true,
     "pendingRoundLogs": 0,
     "lastError": {
-      "timestamp": "2026-10-04T22:06:02.783Z",
-      "message": "GitHub API error: 409 - {\"message\":\"is at b2108007838f7c2e05e26d9b1d54e7c6250cfb89 but expected 623c9b598342fbf6f0348c96b2c0cbf3691d2110\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
+      "timestamp": "2026-10-07T17:01:42.700Z",
+      "message": "GitHub API error: 500 - "
     }
   },
   "worker": "healthy",
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-10-07T16:00:41.201Z"
+  "lastUpdated": "2026-10-07T18:01:05.147Z"
 }
