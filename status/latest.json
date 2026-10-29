@@ -1,21 +1,21 @@
 {
-  "round": 2009,
-  "contributors": 5572,
+  "round": 2010,
+  "contributors": 5575,
   "modelsInCurrentRound": 2,
-  "lastAggregation": "2026-10-25T13:06:47.061Z",
+  "lastAggregation": "2026-10-29T14:04:20.655Z",
   "hasGlobalModel": true,
-  "globalModelRound": 2008,
+  "globalModelRound": 2009,
   "github": {
     "enabled": true,
     "pendingRoundLogs": 0,
     "lastError": {
-      "timestamp": "2026-10-29T04:01:58.934Z",
-      "message": "GitHub API error: 422 - {\"message\":\"Invalid request.\\n\\n\\\"sha\\\" wasn't supplied.\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"422\"}"
+      "timestamp": "2026-10-29T14:04:21.867Z",
+      "message": "GitHub API error: 409 - {\"message\":\"is at fa5b12af2c899bb00855c107f3e0967bc2291882 but expected 207e0cbd628603afbd89a702c1def8bcd3bcde7d\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#create-or-update-file-contents\",\"status\":\"409\"}"
     }
   },
   "worker": "healthy",
   "version": "3.0.0",
   "scheduled": true,
   "cron": "0 * * * *",
-  "lastUpdated": "2026-10-29T14:00:41.394Z"
+  "lastUpdated": "2026-10-29T15:00:39.072Z"
 }
